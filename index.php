@@ -1,3 +1,7 @@
+<?php
+	echo "Hello 1";
+	require_once 'registration_script.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
