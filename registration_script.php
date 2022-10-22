@@ -1,4 +1,5 @@
-<?php
+
+ <?php
 	// echo "Hello 2";
 	// require_once 'database.php';
 
@@ -11,24 +12,32 @@
 		if (empty($username) or empty($password)) {
 			echo "Нужно ввести название команды и указать пароль!";
 		} else {
-			// // register via text file
-			$filename = $username . ".csv";
-			$data = [ [$password, '0', '1', '0', '0', '__________'] ];
+			if (@fopen("users/" . $filename, "r")) {
+				die ("Команда с таким названием уже зарегистрирована.");
+				}
+      echo "Вы успешно зарегистрировались!";
+      setcookie("username", $username, 0);
+      // echo "Cookies set.";
 
-			// open csv file for writing
-			$f = fopen($filename, 'w');
+      // // register via text file
+      $filename = $username . ".csv";
+      $data = [ [$password, '0', '1', '0', '0', '__________'] ];
 
-			if ($f === false) {
-				die('Error opening the file ' . $filename);
+      // open csv file for writing
+      $f = fopen("users/" . $filename, 'w');
+
+      if ($f === false) {
+        die('Error opening the file ' . $filename);
+      }
+
+      // write each row at a time to a file
+      foreach ($data as $row) {
+        fputcsv($f, $row);
+      }
+
+      // close the file
+      fclose($f);
 			}
-
-			// write each row at a time to a file
-			foreach ($data as $row) {
-				fputcsv($f, $row);
-			}
-
-			// close the file
-			fclose($f);
 		}
 	}
 ?>
