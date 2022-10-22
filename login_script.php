@@ -31,6 +31,7 @@
 						echo "Неверный пароль!";
 					} else {
 						echo "Вы успешно вошли!";
+						setcookie("username", $username);
 					}
 				}
 
