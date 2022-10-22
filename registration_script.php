@@ -33,7 +33,7 @@
 
       // write each row at a time to a file
       foreach ($data as $row) {
-        fputcsv($f, $row);
+        fputcsv($f, split(';', $row));
       }
 
       // close the file
