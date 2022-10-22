@@ -12,6 +12,9 @@
 		if (empty($username) or empty($password)) {
 			echo "Нужно ввести название команды и указать пароль!";
 		} else {
+
+      $filename = $username . ".csv";
+
 			if (@fopen("users/" . $filename, "r")) {
 				die ("Команда с таким названием уже зарегистрирована.");
 			}
@@ -19,8 +22,6 @@
       setcookie("username", $username, 0);
       // echo "Cookies set.";
 
-      // // register via text file
-      $filename = $username . ".csv";
       $data = [ [$password, '0', '1', '0', '0', '__________'] ];
 
       // open csv file for writing
