@@ -13,28 +13,32 @@
 		} else {
 			$filename = $username . ".csv";
 			// $filename = "example.csv";
-			// check if file exists
+
+			// check file existion
 			if (@fopen("users/" . $filename, "r")) {
-				
+				// echo "Yes ";
+				// open csv file for reading
+				$f = fopen("users/" . $filename, 'r');
+
+				if ($f === false) {
+					die('Error opening the file ' . $filename);
+				}
+	
+				// compare password with database
+				if (($buffer = fgets($f, 100)) !== false) {
+					$old_pass = (explode(';', $buffer))[0];
+					if ($old_pass !== $password) {
+						echo "Неверный пароль!";
+					} else {
+						echo "Вы успешно вошли!";
+					}
+				}
+
+				// close the file
+				fclose($f);
+			} else {
+				die("Вы не зарегистрированы :(");
 			}
-			// open csv file for reading
-			$f = fopen($filename, 'r');
-
-			if ($f === false) {
-				echo "Вы не зарегистрированы.";
-			}
-
-			// write each row at a time to a file
-			foreach ($data as $row) {
-				fputcsv($f, $row);
-			}
-
-			// close the file
-			fclose($f);
-
-
-
-			// echo "Вы успешно вошли!";
 		}
 	}
 ?>
