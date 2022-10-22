@@ -14,7 +14,7 @@
 		} else {
 			if (@fopen("users/" . $filename, "r")) {
 				die ("Команда с таким названием уже зарегистрирована.");
-				}
+			}
       echo "Вы успешно зарегистрировались!";
       setcookie("username", $username, 0);
       // echo "Cookies set.";
@@ -37,7 +37,6 @@
 
       // close the file
       fclose($f);
-			}
 		}
 	}
 ?>
