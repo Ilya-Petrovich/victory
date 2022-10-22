@@ -11,7 +11,30 @@
 		if (empty($username) or empty($password)) {
 			echo "Нужно ввести название команды и указать пароль!";
 		} else {
-			echo "Вы успешно вошли!";
+			$filename = $username . ".csv";
+			// $filename = "example.csv";
+			// check if file exists
+			if (@fopen("users/" . $filename, "r")) {
+				
+			}
+			// open csv file for reading
+			$f = fopen($filename, 'r');
+
+			if ($f === false) {
+				echo "Вы не зарегистрированы.";
+			}
+
+			// write each row at a time to a file
+			foreach ($data as $row) {
+				fputcsv($f, $row);
+			}
+
+			// close the file
+			fclose($f);
+
+
+
+			// echo "Вы успешно вошли!";
 		}
 	}
 ?>
