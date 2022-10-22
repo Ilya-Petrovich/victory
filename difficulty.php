@@ -7,7 +7,45 @@
 			// echo $_POST['difficulty'];
 
 			// here we save difficulty in team's files
+			// echo $_COOKIE["username"];
+			$tasks = scandir('users');
+			// echo $tasks[2];
+			// $line = ""
+			$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
 
+			if ($f) {
+				$line = fgets($f, 100);
+				rewind($f);
+				$info = (explode(';', $line));
+
+				// echo $info[1];
+				// echo $info[2];
+
+				switch ($_POST['difficulty']) {
+					case 1:
+						$info[1] = 3;
+						$info[2] = 1;
+						break;
+					case 2:
+						$info[1] = 2;
+						$info[2] = 2;
+						break;
+					case 3:
+						$info[1] = 1;
+						$info[2] = 3;
+						break;
+				}
+
+				// echo $info[1];
+				// echo $info[2];
+
+				fwrite($f, implode(";", $info));
+			}
+
+			fclose($f);
+			header('Location: levels.php');
+
+			// fputs($f, )
 		} else {
 			echo "Нужно выбрать уровень сложности!";
 		}

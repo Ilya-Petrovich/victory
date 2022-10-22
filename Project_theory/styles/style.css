@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+    background-image: url("../images/pattern.png");
+    background-color: #4C3375;
+}
+
+.header {
+    height: 123px;
+}
+
+.menu {
+    position: absolute;
+    width: 1688px;
+    height: 62px;
+    left: 120px;
+    top: 34px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-item a {
+    color: #FFFFFF;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.menu-item-one a {
+    color: #FFFFFF;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.menu-item-one {
+    margin-left: 74px;
+}
+
+.menu-item-two a {
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.menu-item-two {
+    margin-left: 932px;
+}
+
+.hat {
+    height: 271px;
+}
+
+.main-title {
+    position: absolute;
+    width: 322px;
+    height: 156px;
+    left: 120px;
+    top: 131px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    color: #4C3375;
+}
+
+.line-image {
+    position: absolute;
+    width: 1920px;
+    height: 130px;
+    left: 0px;
+    top: 123px;
+}
+
+.first-image {
+    position: absolute;
+    width: 306px;
+    height: 323px;
+    left: 1334px;
+    top: 29px;
+}
+
+.texts-form {
+    background-image: url("../images/podlozhka.png");
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 1920px;
+    height: 3260px;
+    left: 0px;
+    top: 394px;
+}
+
+.info {
+    margin-left: 403px;
+    width: 1114px;
+}
+
+.sub-title {
+    position: absolute;
+    width: 862px;
+    height: 60px;
+    margin-top: 119px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #4C3375;
+}
+
+.just-line-image {
+    position: absolute;
+    width: 1111px;
+    height: 0px;
+    margin-top: 253px;
+}
+
+.just-text {
+    position: absolute;
+    width: 1114px;
+    height: 360px;
+    margin-top: 289px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    color: #23282D;
+}
+
+.main-image {
+    position: absolute;
+    width: 1114px;
+    height: 1031px;
+    margin-top: 625px;
+    box-shadow: inset 0px -9px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title-one {
+    position: absolute;
+    width: 1114px;
+    height: 69px;
+    margin-top: 1776px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    color: #4C3375;
+}
+
+.second-text {
+    position: absolute;
+    width: 1114px;
+    height: 97px;
+    margin-top: 1881px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    color: #23282D;
+}
+
+.num-text {
+    position: absolute;
+    width: 1114px;
+    height: 450px;
+    margin-top: 2014px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    color: #23282D;
+}
+
+.third-title {
+    position: absolute;
+    width: 1114px;
+    height: 128px;
+    margin-top: 2524px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #4C3375;
+}
+
+.num-s-text {
+    position: absolute;
+    width: 1114px;
+    height: 57px;
+    margin-top: 2688px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #23282D;
+}
+
+.two {
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    color: #23282D;
+}
+
+.button {
+    position: absolute;
+    width: 565px;
+    height: 160px;
+    left: 677px;
+    top: 3180px;
+    background: #CB9FFF;
+    box-shadow: 15px 13px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #b67dfa;
+}
+
+.end-image {
+    position: absolute;
+    width: 348px;
+    height: 362px;
+    left: 120px;
+    top: 3586px;
+}

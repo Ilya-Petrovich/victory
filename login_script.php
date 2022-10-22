@@ -23,15 +23,16 @@
 				if ($f === false) {
 					die('Error opening the file ' . $filename);
 				}
-	
+
 				// compare password with database
 				if (($buffer = fgets($f, 100)) !== false) {
 					$old_pass = (explode(';', $buffer))[0];
 					if ($old_pass !== $password) {
 						echo "Неверный пароль!";
 					} else {
-						echo "Вы успешно вошли!";
+						// echo "Вы успешно вошли!";
 						setcookie("username", $username);
+						header('Location: difficulty.php');
 					}
 				}
 
