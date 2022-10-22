@@ -8,26 +8,34 @@
 	if (isset($_POST['submit'])) {
 		// echo "asdasd";
 		$text = [];
-		echo $_POST['submit'];
+		// echo $_POST['submit'];
 		$f = fopen('tasks/q_'.$_POST['submit'], 'r');
 
 		$i = 0;
 
 		while (!feof($f)) {
-			$text[$i] = fgets($f);
+			$text[$i] = stream_get_line($f, 100, "\n");
 			$i++;
+		}
+		// echo strlen($text[0]);
+
+		while(! is_numeric($text[0][-1])) {
+			// echo "YES";
+			$text[0] = substr($text[0], 0, -1);
 		}
 
 		fclose($f);
 
 		// echo "FILE ".$text[0]."|";
 		$file = "";
-		$file = substr($text[0], 0, - 1);
-		// $text = explode(" "; $text[0])[0];
+		$file = $text[0];
+		// $file = substr($text[0], 0, strlen($text[0]) - 1);
+		// // $text = explode(" "; $text[0])[0];
 		// echo "FILE ".$sss."|";;
 		// echo "FILE ".$file."|";
 
 		// echo "NDKANSDK";
+		// echo phpversion();
 
 		$f = fopen('tasks/'.$file, 'r');
 		$i = 0;
