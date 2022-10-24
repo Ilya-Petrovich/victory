@@ -2,6 +2,8 @@
 	// echo "Hello 2";
 	// require_once 'database.php';
 
+// SetCookie("username", "");
+
 	extract($_POST);
 
 	if(isset($_POST['submit'])) {
