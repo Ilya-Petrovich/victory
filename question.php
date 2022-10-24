@@ -105,6 +105,7 @@
                 <div class="slider">
                     <div class="owl-carousel owl-theme">
                         <div class="slide">
+							<form action="question.php" method="post">
                             <div class="slide__title">
 								<?php echo $text[1]; ?>
                             </div>
@@ -124,6 +125,10 @@
                                     </div>
                                 </div>
                             </div>
+							<div>
+								<button type="submit" name="submit_answer">Ответить</button>
+							</div>
+							</form>
                         </div>
                         <div class="slide">
                             <div class="slide__title">

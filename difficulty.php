@@ -79,7 +79,7 @@
 					<button type="submit" name="submit_exit">Выйти</button>
 				</form>
             </div>
-			<form
+			<!-- <form -->
             <div class="head__title">
                 <div class="title">
                     <h1> <?php echo $message; ?> </h1>
@@ -89,10 +89,12 @@
             </div>
             <div class="head__apps">
                 <div class="app" id="app-one">
+					<form action="difficulty.php" method="post">
                     <div class="app__title">
                         <h2>Начинающий</h2>
                         Этот котик только начинает свой путь в энергетике, поэтому у него есть целых три попытки!
                     </div>
+					</form>
                     <div class="app__img">
                         <img src="levels/images/point_1.png" alt="">
                         <img src="levels/images/point_1.png" alt="">

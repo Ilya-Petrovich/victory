@@ -85,6 +85,7 @@
             <div class="info">
 <?php
 	for ($i = 0; $i < count($text); $i++) {
+		// echo $text[$i]."<br>";
 		if ($text[$i][0] != "$") {
 			if ($i == 0) {
 				echo '<h1 class="sub-title">'.$text[$i].'</h1>';
@@ -101,6 +102,8 @@
 			}
 		} else {
 			$image = explode("$$", $text[$i])[1];
+			echo '<img src="'.$image.'"';
+			// echo $image;
 		}
 	}
 	echo '<form action="question.php" method="post">';
