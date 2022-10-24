@@ -1,8 +1,14 @@
 <?php
-	$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
+	extract($_POST);
 
-	if ($f) {
-		header('Location: personal_page.php');
+	if (isset($_POST['submit_exit'])) {
+		SetCookie("username", "");
+	} else {
+		$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
+
+		if ($f) {
+			header('Location: personal_page.php');
+		}
 	}
 ?>
 

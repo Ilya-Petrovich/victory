@@ -49,7 +49,9 @@
                     <!-- <a href=".." class="home">На главную</a> -->
                     <a href="..">Мой прогресс</a>
                 </div>
-                <a href="" class="exit">Выйти</a>
+				<form action="index.php" method="post">
+					<button type="submit" name="submit_exit">Выйти</button>
+				</form>
             </div>
             <div class="cat-line">
                 <p>ТЕОРИЯ</p>

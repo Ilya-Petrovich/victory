@@ -63,7 +63,9 @@
                         <a href="..">Мой прогресс</a>
                     </li>
                     <li class="menu-item-two">
-                        <a href="#exit">Выйти</a>
+						<form action="index.php" method="post">
+                        	<button type="submit" name="submit_exit">Выйти</button>
+						</form>
                     </li>
                 </ul>
             </div>
@@ -87,22 +89,22 @@
 			if ($i == 0) {
 				echo '<h1 class="sub-title">'.$text[$i].'</h1>';
 				echo '<div class="just-line-image">';
-				echo '	<img src="theory/images/line.png" alt="line">';
+					echo '<img src="theory/images/line.png" alt="line">';
 				echo '</div>';
 			} else {
 				echo '<div class="just-text">';
-				echo $text[$i];
+					echo $text[$i]."<br>";
 				echo '</div>';
-				echo '<div class="main-image">';
-				echo '	<img src="theory/images/main-image.png" alt="main-image">';
-				echo '</div>';
+				// echo '<div class="main-image">';
+				// 	echo '<img src="theory/images/main-image.png" alt="main-image">';
+				// echo '</div>';
 			}
 		} else {
 			$image = explode("$$", $text[$i])[1];
 		}
 	}
 	echo '<form action="question.php" method="post">';
-	echo '<button type="submit" name="submit_theory" value="'.$_POST['submit_question'].'" class="button">Перейти к вопросу</button>';
+		echo '<button type="submit" name="submit_theory" value="'.$_POST['submit_question'].'" class="button">Перейти к вопросу</button>';
 	echo '</form>';
 ?>
             </div>

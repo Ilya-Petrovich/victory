@@ -95,12 +95,11 @@
             </div>
             <div class="health-line">
                 КОЛИЧЕСТВО ПОПЫТОК:
-<?php
-				for ($i = 0; $i < $lives; $i++) {
-					// echo "";
-                	echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
-				}
-?>
+				<?php
+					for ($i = 0; $i < $lives; $i++) {
+	                	echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
+					}
+				?>
             </div>
             <div class="slider-block">
                 <div class="slider">
