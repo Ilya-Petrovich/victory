@@ -102,7 +102,7 @@
 			}
 		} else {
 			$image = explode("$$", $text[$i])[1];
-			echo '<img src="'.$image.'"';
+			echo '<img src="tasks/'.$image.'">';
 			// echo $image;
 		}
 	}
