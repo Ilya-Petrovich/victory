@@ -65,7 +65,7 @@
 					$id = "";
 					$metka = "";
 
-					if ($state == "*") {
+					if ($state == "z") {
 						$id = "card-one";
 						// $metka = "1";
 					}
