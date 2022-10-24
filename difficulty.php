@@ -4,8 +4,9 @@
 	extract($_POST);
 
 	if(isset($_POST['submit_diff'])) {
+		echo "YES";
 		if(isset($_POST['difficulty'])) {
-			// echo $_POST['difficulty'];
+			echo $_POST['difficulty'];
 
 			// here we save difficulty in team's files
 			// echo $_COOKIE["username"];
@@ -72,64 +73,79 @@
     <title>Выбор сложности</title>
 </head>
 <body>
+	<form action="index.php" method="post">
+		<button type="submit" name="submit_exit">Выйти</button>
+	</form>
+	<form action="difficulty.php" method="post">
     <header>
         <div class="container">
             <div class="navigation">
-				<form action="index.php" method="post">
-					<button type="submit" name="submit_exit">Выйти</button>
-				</form>
             </div>
 			<!-- <form -->
-            <div class="head__title">
-                <div class="title">
-                    <h1> <?php echo $message; ?> </h1>
-                	Выбирая себе компаньона помни, что от него напрямую зависит сложность прохождения игры и количество набранных за правильные ответы баллов. Внимательно ознакомься с правилами игры.
-                </div>
+	            <div class="head__title">
+	                <div class="title">
+	                    <h1> <?php echo $message; ?> </h1>
+	                	Выбирая себе компаньона помни, что от него напрямую зависит сложность прохождения игры и количество набранных за правильные ответы баллов. Внимательно ознакомься с правилами игры.
+	                </div>
 
-            </div>
-            <div class="head__apps">
-                <div class="app" id="app-one">
-					<form action="difficulty.php" method="post">
-                    <div class="app__title">
-                        <h2>Начинающий</h2>
-                        Этот котик только начинает свой путь в энергетике, поэтому у него есть целых три попытки!
-                    </div>
-					</form>
-                    <div class="app__img">
-                        <img src="levels/images/point_1.png" alt="">
-                        <img src="levels/images/point_1.png" alt="">
-                        <img src="levels/images/point_1.png" alt="">
-                    </div>
-                    <div class="app__cat">
-                        <img src="/images/evrika_base 2.png" alt="">
-                    </div>
-                </div>
-                <div class="app" id="app-two">
-                    <div class="app__title">
-                        <h2>Продвинутый</h2>
-                        Если веришь в свои силы, то тебе сюда. Обрати внимание, у тебя всего две попытки!
-                    </div>
-                    <div class="app__img">
-                        <img src="levels/images/point_2.png" alt="">
-                        <img src="levels/images/point_2.png" alt="">
-                    </div>
-                    <div class="app__cat">
-                        <img src="levels/images/evrika_cool 2.png" alt="">
-                    </div>
-                </div>
-                <div class="app" id="app-three">
-                    <div class="app__title" >
-                        <h2>Эксперт</h2>
-                        Вау! Игра с экспертом по энергетике - это вызов всему миру. У тебя нет права на ошибку...
-                    </div>
-                    <div class="app__img">
-                        <img src="levels/images/point_3.png" alt="">
-                    </div>
-                    <div class="app__cat">
-                        <img src="levels/images/evrika_3.png" alt="">
-                    </div>
-                </div>
-            </div>
+	            </div>
+	            <div class="head__apps">
+					<label style="width:100%, height:100%">
+		                <div class="app" id="app-one">
+			                    <div class="app__title">
+									<input type="radio" name="difficulty" style="display:none">
+									<h2>Начинающий</h2>
+			                        Этот котик только начинает свой путь в энергетике, поэтому у него есть целых три попытки!
+			                    </div>
+							<!-- </form> -->
+		                    <div class="app__img">
+		                        <img src="levels/images/point_1.png" alt="">
+		                        <img src="levels/images/point_1.png" alt="">
+		                        <img src="levels/images/point_1.png" alt="">
+		                    </div>
+		                    <div class="app__cat">
+		                        <img src="/images/evrika_base 2.png" alt="">
+		                    </div>
+		                </div>
+					</label>
+
+
+					<label style="width:100%, height:100%">
+						<div class="app" id="app-two">
+							<!-- <form action="difficulty.php" method="post"> -->
+			                    <div class="app__title">
+									<input type="radio" name="difficulty" style="display:none">
+			                        <h2>Продвинутый</h2>
+			                        Если веришь в свои силы, то тебе сюда. Обрати внимание, у тебя всего две попытки!
+			                    </div>
+			                    <div class="app__img">
+			                        <img src="levels/images/point_2.png" alt="">
+			                        <img src="levels/images/point_2.png" alt="">
+			                    </div>
+			                    <div class="app__cat">
+			                        <img src="levels/images/evrika_cool 2.png" alt="">
+			                    </div>
+		                </div>
+					</label>
+
+					<label style="width:100%, height:100%">
+						<div class="app" id="app-three">
+		                    <div class="app__title" >
+								<input type="radio" name="difficulty"  style="display:none">
+		                        <h2>Эксперт</h2>
+		                        Вау! Игра с экспертом по энергетике - это вызов всему миру. У тебя нет права на ошибку...
+		                    </div>
+		                    <div class="app__img">
+		                        <img src="levels/images/point_3.png" alt="">
+		                    </div>
+		                    <div class="app__cat">
+		                        <img src="levels/images/evrika_3.png" alt="">
+		                    </div>
+		                </div>
+					</label>
+
+				</div>
+			<!-- </form> -->
         </div>
     </header>
     <main>
@@ -180,10 +196,10 @@
         </div>
     </main>
     <footer>
-		<form action="difficulty.php" method="post">
+		<!-- <form action="difficulty.php" method="post"> -->
 			<button type="submit" name="submit_diff">Я готов к игре!</button>
-		</form>
 
     </footer>
+</form>
 </body>
 </html>
