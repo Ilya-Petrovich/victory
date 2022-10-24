@@ -1,3 +1,11 @@
+<?php
+	$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
+
+	if ($f) {
+		header('Location: personal_page.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

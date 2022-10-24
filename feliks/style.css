@@ -1,0 +1,634 @@
+body{
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+}
+h1,h2,h3{
+    margin: 0;
+}
+/*-------------------Header--------------------*/
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/Frame\ 2.png);
+    background-color: #4C3375;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.navigation a{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    transition: 10s;
+    
+}
+
+.navigation a:hover{
+    text-decoration: none;
+}
+
+.home{
+    text-decoration: none;
+    margin-right: 80px;
+}
+
+.head__title{
+    width: 100%;
+    height: 233px;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    width: 1114px;
+    height: 233px;
+    margin-top: 70px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.title h1{
+    margin-bottom: 30px;
+}
+
+.head__apps{
+    width: 100%;
+    height: 557px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:70px ;
+}
+
+.app{
+    width: 425px;
+    height: 100%;
+    box-shadow: 15px 13px 4px #4C3375;
+    border-radius: 28px;
+    
+    
+    
+}
+
+#app-one{
+    background-color: #5CE5E5;
+}
+
+#app-two{
+    background-color: #FF91AB;
+}
+
+#app-three{
+    background-color: #CB9FFF;
+}
+
+.app__title{
+    margin-top: 32px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.app__title h2{
+    margin-bottom: 26px;
+}
+
+.app__img{
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.app__img img{
+    margin: 10px;
+}
+
+.app__cat{
+    width: 100%;
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+}
+
+#options{
+    color: #ffffff;
+}
+
+
+/*-------------------Container--------------------*/
+
+.container{
+    width: 1680px;
+    
+}
+
+
+/*-------------------Main--------------------*/
+
+main{
+    width: 100%;
+    height: 1645px;
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 125%;
+}
+
+.info p{
+    margin: 37px 0;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 86px;
+    color: #4C3375;
+}
+
+#info-p{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 115px;
+    color: #4C3375;
+    margin: 122px 0 37px 0;
+}
+
+.points{
+    width: 909px;
+    margin: 37px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.point{
+    text-align: center;
+}
+
+.last__info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    color: #4C3375;
+}
+
+/*-------------------Footer--------------------*/
+
+footer{
+    width: 100%;
+    height: 229px;
+    background-image: url(/images/Frame\ 2.png);
+    background-color: #4C3375;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.btn__start{
+    position: absolute;
+    width: 571px;
+    height: 122px;
+    background: #FF91AB;
+    border-radius: 32px;
+    border: 0;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    top: -61px;
+    transition: 0.5s;
+}
+
+.btn__start:hover{
+    background: #e7728d;
+}
+
+
+
+/*=================================game-end.html=====================================*/
+/*----------------------------------------------------------------------------------*/
+
+.nav__left a{
+    text-decoration: none;
+}
+
+.head__light{
+    background-color: #ff5d5d;
+}
+
+.end__title{
+    text-align: center;
+    margin-top: 132px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 144px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.end__text{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.end__img{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.btn__restart{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn__restart a{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.btn__restart a:hover{
+    text-decoration: none;
+}
+
+.head__norm{
+    background-color: #9259ee;
+}
+
+.head__hard{
+    background-color: #4C3375;
+}
+
+/*=================================lvl.html=====================================*/
+/*----------------------------------------------------------------------------------*/
+
+.cat-line{
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    background-color: #CB9FFF;
+    left: 0;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.lvl__head{
+    position: relative;
+    height: 2000px;
+}
+
+.cat-line p{
+    margin: 0;
+    margin-left: 100px;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 125%;
+    color: #4C3375;
+}
+
+.cat-line img{
+    position: absolute;
+    right: 300px;
+    margin-top: 20px;
+}
+
+.teory-cards{
+    margin-top: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.teory-card{
+    width: 1000px;
+    background-color: #5CE5E5;
+    margin-top: 43px;
+    background: #C7CBCE;
+    box-shadow: inset -10px -9px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    position: relative;
+}
+
+.card__title{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    color: #23282D;
+    margin: 55px 0 40px 102px;
+}
+
+.card__down{
+    margin-left: 102px;
+    display: flex;
+    justify-content: space-between;
+}
+.card__questions{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__questions a{
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 125%;
+    text-decoration-line: underline;
+    color: #23282D;
+}
+
+.card__questions a:hover{
+    text-decoration: none;
+}
+
+.card__down img{
+    margin: 0 25px 25px 0;
+}
+
+#card-two{
+    background-color: #FFD600;
+}
+
+#card-three{
+    background-color: #FF91AB;
+}
+
+/*=================================victorina.html=====================================*/
+/*----------------------------------------------------------------------------------*/
+
+
+.test-info{
+    width: 100%;
+    margin-top: 350px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.health-line{
+    margin-top: 80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+
+}
+
+.health-line img{
+    margin-left: 20px;
+}
+
+.slider{
+    width: 1396px;
+    
+    margin-top: 40px;
+    background: rgba(203, 159, 255, 0.25);
+    border-radius: 27px;
+}
+
+.slide__title{
+    margin: 53px 0 0 141px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+.slide__question{
+    width: 55%;
+    margin:50px 0 0 141px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.label-light{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.label-light:first-child{
+    margin-bottom: 41px;
+}
+
+.label-light:last-child{
+    margin-bottom: 41px;
+}
+
+.input-light{
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 6px solid #CB9FFF;
+}
+
+.owl-next{
+    width: 100px;
+    height: 100px;
+}
+
+.owl-prev span{
+    display: none;
+}
+.owl-next span{
+    font-size: 40px;
+    width: 100px;
+    background-image: url(/images/Стрелка\ для\ проверки\ ответа.png);
+    
+}
+
+.owl-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px; 
+}
+
+.slider-block{
+    display: flex;
+    justify-content: center;
+}
+
+.slide__title-true{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.score{
+    margin-right: 300px;
+}
+.score__title{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 80px 0 100px 0;
+}
+
+.true-img{
+    margin: 80px 0 0 100px;
+}
+
+.score__score{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin-bottom: 120px;
+}
+
+.score__balls{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+.score__balls a{
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.slide-img{
+    width: 100%;
+    height: 481px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img-quest{
+    width: 543px;
+    height: 481px;
+}
+
+.slide-norm{
+    display: flex;
+    align-items: center;
+}
+
+.question__file{
+    display: flex;
+    align-items: center;
+}
+
+.label-file{
+    width: 600px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #4C3375;
+    text-align: center;
+   
+}
+
+.input-file{
+    display: none;
+}
+
+.slide__question{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img{
+    min-width: 200px;
+    margin-right: 60px;
+}
