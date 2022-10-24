@@ -87,7 +87,7 @@
 							echo '</div>';
 							echo '<div class="card__down">';
 								echo '<div class="card__questions">';
-								if ($state == "*") {
+								if ($state == "z") {
 									echo '<button type="submit" name="submit_question" value="'.$number.'">Теория</button>';
 								}
 								echo '</div>';
