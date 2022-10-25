@@ -8,13 +8,25 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
-
-    background-image: url("../images/pattern.png");
+    background-image: url("../main_page/images/Frame2.png");
     background-color: #4C3375;
+
+}
+
+h1 {
+  margin: 0;
+}
+
+.shapka {
+  background-image: url("../image/pattern.png");
+  background-color: #4C3375;
+  display: flex;
+  height: 394px;
 }
 
 .header {
     height: 123px;
+    width: 100%;
 }
 
 .menu {
@@ -46,22 +58,31 @@ body {
     margin-left: 74px;
 }
 
-.menu-item-two a {
+/* .menu-item-two a {
     color: #FFFFFF;
     font-size: 36px;
-}
+} */
 
 .menu-item-two {
     margin-left: 932px;
 }
 
 .exit {
+<<<<<<< HEAD
     color: #FFFFFF;
     background: none;
     border: 0;
     font-family: 'Roboto';
     font-style: normal;
     font-size: 36px;
+=======
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 36px;
+>>>>>>> 9c7a22d (Cry from the heart)
 }
 
 .hat {
@@ -84,7 +105,7 @@ body {
 
 .line-image {
     position: absolute;
-    width: 1920px;
+    width: 100%;
     height: 130px;
     left: 0px;
     top: 123px;
@@ -114,9 +135,7 @@ body {
 }
 
 .sub-title {
-    position: absolute;
-    width: 862px;
-    height: 60px;
+    width: 100%;
     margin-top: 119px;
     font-family: 'Exo 2';
     font-style: normal;
@@ -126,17 +145,12 @@ body {
 }
 
 .just-line-image {
-    position: absolute;
-    width: 1111px;
     height: 0px;
-    margin-top: 253px;
+    top: 74px;
 }
 
 .just-text {
-    position: absolute;
-    width: 1114px;
-    height: 360px;
-    margin-top: 289px;
+    margin-top: 36px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -145,18 +159,12 @@ body {
 }
 
 .main-image {
-    position: absolute;
-    width: 1114px;
-    height: 1031px;
-    margin-top: 625px;
+    top: 36px;
     box-shadow: inset 0px -9px 4px rgba(0, 0, 0, 0.25);
 }
 
 .title-one {
-    position: absolute;
-    width: 1114px;
-    height: 69px;
-    margin-top: 1776px;
+    margin-top: 60px;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 600;
@@ -165,10 +173,7 @@ body {
 }
 
 .second-text {
-    position: absolute;
-    width: 1114px;
-    height: 97px;
-    margin-top: 1881px;
+    margin-top: 60px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -177,10 +182,7 @@ body {
 }
 
 .num-text {
-    position: absolute;
-    width: 1114px;
-    height: 450px;
-    margin-top: 2014px;
+    margin-top: 36px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -189,10 +191,7 @@ body {
 }
 
 .third-title {
-    position: absolute;
-    width: 1114px;
-    height: 128px;
-    margin-top: 2524px;
+    margin-top: 60px;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 600;
@@ -202,10 +201,7 @@ body {
 }
 
 .num-s-text {
-    position: absolute;
-    width: 1114px;
-    height: 57px;
-    margin-top: 2688px;
+    margin-top: 36px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -223,11 +219,8 @@ body {
 }
 
 .button {
-    position: absolute;
     width: 565px;
     height: 160px;
-    left: 677px;
-    top: 3180px;
     background: #CB9FFF;
     box-shadow: 15px 13px 4px rgba(0, 0, 0, 0.25);
     border-radius: 28px;
@@ -238,6 +231,9 @@ body {
     text-align: center;
     color: #FFFFFF;
     border: 0;
+    margin-left: 100px;
+    top: -80px;
+    position: relative;
 }
 
 .button:hover {
@@ -246,9 +242,26 @@ body {
 }
 
 .end-image {
-    position: absolute;
+    /* position: relative; */
     width: 348px;
     height: 362px;
     left: 120px;
     top: 3586px;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-image: url("../images/pattern.png");
+  background-color: #4C3375;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 310px;
+  top: 300px;
 }
