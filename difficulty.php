@@ -77,7 +77,7 @@ if (isset($_POST['submit_diff'])) {
 
 <body>
 	<form action="index.php" method="post">
-		<button type="submit" name="submit_exit">Выйти</button>
+		<button class="exit" type="submit" name="submit_exit">Выйти</button>
 	</form>
 	<form action="difficulty.php" method="post">
 		<header>
@@ -210,9 +210,9 @@ if (isset($_POST['submit_diff'])) {
 				</div>
 			</div>
 		</main>
-		<footer>
+		<footer class="dif_footer">
 			<!-- <form action="difficulty.php" method="post"> -->
-			<button type="submit" name="submit_diff">Я готов к игре!</button>
+			<button class="btn__start" type="submit" name="submit_diff">Я готов к игре!</button>
 
 		</footer>
 	</form>

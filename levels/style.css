@@ -723,3 +723,7 @@ footer{
     font-size: 36px;
     margin-top: 80%;
 }
+
+.dif_footer {
+    background-image: url("../levels/images/Frame 2.png");
+}
