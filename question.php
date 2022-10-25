@@ -108,7 +108,7 @@
             <div class="navigation">
                 <div class="nav__left">
                     <a href="levels.php" class="home">К выбору уровня</a>
-                    <a href="">Мой прогресс</a>
+                    <a href="personal_page.php">Мой прогресс</a>
                 </div>
 				<form action="index.php" method="post">
 					<button type="submit" name="submit_exit">Выйти</button>
@@ -185,6 +185,9 @@
 											$add_score = 0;
 
 											$info[6][$number - 1] = "0";
+											$lives = $lives - 1;
+											$info[1] = $lives;
+
 											$f_info = fopen("users/".$_COOKIE["username"].".csv", "w");
 											if ($f_info) {
 												$info = (implode(';', $info));

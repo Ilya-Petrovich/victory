@@ -14,6 +14,9 @@
 		// echo $info[6]."<br>";
 	}
 
+	if ($info[1] == 0) {
+		echo "GAME OVER!";
+	}
 	// for ($i = 0; $i < 10; $i++) {
 	// 	echo $info[6][$i]."<br>";
 	// }
