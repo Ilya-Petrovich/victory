@@ -8,20 +8,22 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
-    background-image: url("../main_page/images/Frame2.png");
+
+    /* background-image: url("../main_page/images/Frame2.png");
     background-image: url("../images/Frame2.png");
-    background-color: #4C3375;
+    background-color: #4C3375; */
 }
 
 h1 {
-  margin: 0;
+    margin: 0;
 }
 
 .shapka {
-  background-image: url("../image/pattern.png");
-  background-color: #4C3375;
-  display: flex;
-  height: 394px;
+    background-image: url("../images/Frame2.png");
+    background-color: #4C3375;
+    
+    display: flex;
+    height: 394px;
 }
 
 h1 {
@@ -159,8 +161,8 @@ h1 {
 }
 
 .main-image {
+
     top: 36px;
-    margin-top: 36px;
     box-shadow: inset 0px -9px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -222,7 +224,6 @@ h1 {
 
 
 .button {
-    width: 565px;
     /*width: 565px;*/
     height: 160px;
     background: #CB9FFF;
@@ -236,10 +237,9 @@ h1 {
     color: #FFFFFF;
     border: 0;
     margin-left: 100px;
-    top: -80px;
     position: relative;
-    top: 80px;
-    position: relative;
+    bottom: -220px;
+    z-index: 99;
 }
 
 .button:hover {
@@ -249,29 +249,20 @@ h1 {
 
 
 .end-image {
-    /* position: relative; */
+    position: relative;
     width: 348px;
     height: 362px;
-    left: 120px;
-    top: 3586px;
+    right: 650px;
+    top: -50px;
 }
 
 .page {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-footer {
-  background-image: url("../images/pattern.png");
-  background-color: #4C3375;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 310px;
-  top: 300px;
-}
 
 .page {
     overflow: hidden;
@@ -283,12 +274,15 @@ footer {
 footer {
     background-image: url("../images/Frame2.png");
     background-color: #4C3375;
+    /* background-size: cover; */
     display: flex;
     justify-content: center;
     position: relative;
     height: 310px;
-    top: 3000px;
-    margin-top: 100px;
+    top: 190%;
+    margin-bottom: 0px;
+    /* margin-top: 100px; */
+    /* width: 100%; */
 }
 
 /* .end {
@@ -300,4 +294,3 @@ footer {
     justify-content: center;
     top: 300px;
 } */
-
