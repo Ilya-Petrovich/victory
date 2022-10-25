@@ -33,16 +33,12 @@
     <header class="header">
         <div class="container">
             <div class="menu">
-                <ul>
-                    <li class="menu-item-one">
-                        <a href="levels.php">К выбору уровня</a>
-                    </li>
-                    <li class="menu-item-two">
-						<form action="index.php" method="post">
-                        	<button class="exit" type="submit" name="submit_exit">Выйти</button>
-						</form>
-                    </li>
-                </ul>
+							<div class="navigation">
+											<a href=".." style="text-decoration:none; width:1500px">К выбору уровня</a>
+											<form action="index.php" method="post">
+												  <button class="exit" type="submit" name="submit_exit">Выйти</button>
+											</form>
+							</divК выбору уровня
             </div>
         </div>
     </header>
@@ -80,9 +76,6 @@
                         </div>
                         <img src="../Project_cat/image/defolt.png" alt="defolt">
                     </div>
-                </div>
-                <div class="action">
-                    <button class="button">Попробовать ещё раз!</button>
                 </div>
             </div>
         </div>
