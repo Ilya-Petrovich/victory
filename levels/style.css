@@ -505,7 +505,8 @@ footer{
     width: 55%;
     margin:50px 0 0 141px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    margin-bottom: 5%;
 }
 
 
@@ -697,3 +698,15 @@ footer{
 	color: #666;
 }
 */
+
+/*chanGe*/
+
+.answer {
+    border: 0;
+    background: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 36px;
+    right: 10px;
+}
