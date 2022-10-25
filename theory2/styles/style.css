@@ -8,9 +8,14 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
     background-image: url("../main_page/images/Frame2.png");
     background-color: #4C3375;
 
+=======
+    background-image: url("../images/Frame2.png");
+    background-color: #4C3375;
+>>>>>>> c86ff3b (New change)
 }
 
 h1 {
@@ -18,10 +23,15 @@ h1 {
 }
 
 .shapka {
+<<<<<<< HEAD
   background-image: url("../image/pattern.png");
   background-color: #4C3375;
   display: flex;
   height: 394px;
+=======
+    display: flex;
+    height: 394px;
+>>>>>>> c86ff3b (New change)
 }
 
 .header {
@@ -68,12 +78,21 @@ h1 {
 }
 
 .exit {
+<<<<<<< HEAD
   color: #FFFFFF;
   background: none;
   border: 0;
   font-family: 'Roboto';
   font-style: normal;
   font-size: 36px;
+=======
+    background: none;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 36px;
+    color: #FFFFFF;
+>>>>>>> c86ff3b (New change)
 }
 
 .hat {
@@ -137,7 +156,7 @@ h1 {
 
 .just-line-image {
     height: 0px;
-    top: 74px;
+    margin-top: 36px;
 }
 
 .just-text {
@@ -150,7 +169,7 @@ h1 {
 }
 
 .main-image {
-    margin-top: 36px;
+    margin-top: 50px;
     box-shadow: inset 0px -9px 4px rgba(0, 0, 0, 0.25);
 }
 

@@ -107,16 +107,16 @@
 		}
 	}
 	echo '<form action="question.php" method="post">';
-		echo '<button type="submit" name="submit_theory" value="'.$_POST['submit_question'].'" class="button">Перейти к вопросу</button>';
+		echo '<button class="button" type="submit" name="submit_theory" value="'.$_POST['submit_question'].'" class="button">Перейти к вопросу</button>';
 	echo '</form>';
 ?>
             </div>
         </div>
     </section>
-    <section class="end">
-        <div class="end-image">
-            <img src="theory/images/end-cat.png" alt="end image">
-        </div>
-    </section>
+	<footer class="footer">
+        	<div class="end-image">
+            	<img src="theory/images/end-cat.png" alt="end image">
+        	</div>
+	</footer>
 </body>
 </html>
