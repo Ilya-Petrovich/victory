@@ -322,7 +322,10 @@ footer{
     background-color: #9259ee;
 }
 
+/*Change 25.10.22*/
+
 .head__hard{
+    background-image: url("../levels/images/Frame 2.png");
     background-color: #4C3375;
 }
 

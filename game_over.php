@@ -19,7 +19,7 @@
                     <a href="personal_page.php">Мой прогресс</a>
                 </div>
 				<form action="index.php" method="post">
-					<button type="submit" name="submit_exit">Выйти</button>
+					<button class="exit" type="submit" name="submit_exit">Выйти</button>
 				</form>
             </div>
             <div class="end__title">
