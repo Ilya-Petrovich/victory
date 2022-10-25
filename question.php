@@ -152,10 +152,14 @@
 											// }
 											$info[6][$number - 1] = "1";
 											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
-											if ($f_info) {
-												$info = (implode(';', $info));
-												fputs($f_info, $info, strlen($info));
+											$r = fgets($f_info, 100);
+											if ($info[6][$number - 1] == "z") {
+												if ($f_info) {
+													$info = (implode(';', $info));
+													fputs($f_info, $info, strlen($info));
+												}
 											}
+
 											fclose($f_info);
 										} else {
 											$message = "ОТВЕТ НЕВЕРНЫЙ!";
