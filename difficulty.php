@@ -85,12 +85,18 @@
 	            <div class="head__title">
 	                <div class="title">
 	                    <h1> <?php echo $message; ?> </h1>
-	                	Выбирая себе компаньона помни, что от него напрямую зависит сложность прохождения игры и количество набранных за правильные ответы баллов. Внимательно ознакомься с правилами игры.
+	                	<p class="text__info">Выбирая себе компаньона помни, что от него напрямую зависит сложность прохождения игры и количество набранных за правильные ответы баллов. Внимательно ознакомься с правилами игры.</p>
 	                </div>
-
 	            </div>
-	            <div class="head__apps">
-					<label style="width:100%, height:100%">
+
+
+
+				<div class="head__apps">
+
+
+					<div class="form_radio_btn" >
+					<input id="radio-1" type="radio" name="radio" value="1" checked>
+					<label for="radio-1">
 		                <div class="app" id="app-one">
 			                    <div class="app__title">
 									<input type="radio" name="difficulty" style="display:none">
@@ -108,41 +114,49 @@
 		                    </div>
 		                </div>
 					</label>
+					</div>
 
 
-					<label style="width:100%, height:100%">
-						<div class="app" id="app-two">
-							<!-- <form action="difficulty.php" method="post"> -->
-			                    <div class="app__title">
-									<input type="radio" name="difficulty" style="display:none">
-			                        <h2>Продвинутый</h2>
-			                        Если веришь в свои силы, то тебе сюда. Обрати внимание, у тебя всего две попытки!
-			                    </div>
-			                    <div class="app__img">
-			                        <img src="levels/images/point_2.png" alt="">
-			                        <img src="levels/images/point_2.png" alt="">
-			                    </div>
-			                    <div class="app__cat">
-			                        <img src="levels/images/evrika_cool 2.png" alt="">
-			                    </div>
-		                </div>
-					</label>
+					<div class="form_radio_btn">
+						<input id="radio-2" type="radio" name="radio" value="2">
+						<label for="radio-2">
+								<div class="app" id="app-two">
+									<!-- <form action="difficulty.php" method="post"> -->
+										<div class="app__title">
+											<input type="radio" name="difficulty" style="display:none">
+											<h2>Продвинутый</h2>
+											Если веришь в свои силы, то тебе сюда. Обрати внимание, у тебя всего две попытки!
+										</div>
+										<div class="app__img">
+											<img src="levels/images/point_2.png" alt="">
+											<img src="levels/images/point_2.png" alt="">
+										</div>
+										<div class="app__cat">
+											<img src="levels/images/evrika_cool 2.png" alt="">
+										</div>
+								</div>
+							</label>
+					</div>
 
-					<label style="width:100%, height:100%">
+
+					<div class="form_radio_btn">
+					<input id="radio-3" type="radio" name="radio" value="3">
+					<label for="radio-3">
 						<div class="app" id="app-three">
-		                    <div class="app__title" >
+							<div class="app__title" >
 								<input type="radio" name="difficulty"  style="display:none">
-		                        <h2>Эксперт</h2>
-		                        Вау! Игра с экспертом по энергетике - это вызов всему миру. У тебя нет права на ошибку...
-		                    </div>
-		                    <div class="app__img">
-		                        <img src="levels/images/point_3.png" alt="">
-		                    </div>
-		                    <div class="app__cat">
-		                        <img src="levels/images/evrika_3.png" alt="">
-		                    </div>
-		                </div>
+								<h2>Эксперт</h2>
+								Вау! Игра с экспертом по энергетике - это вызов всему миру. У тебя нет права на ошибку...
+							</div>
+							<div class="app__img">
+								<img src="levels/images/point_3.png" alt="">
+							</div>
+							<div class="app__cat">
+								<img src="levels/images/evrika_3.png" alt="">
+							</div>
+						</div>
 					</label>
+				</div>
 
 				</div>
 			<!-- </form> -->

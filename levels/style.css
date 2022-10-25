@@ -12,7 +12,7 @@ h1,h2,h3{
 
 header{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-image: url(/images/Frame\ 2.png);
     background-color: #4C3375;
     display: flex;
@@ -50,6 +50,7 @@ header{
     height: 233px;
     display: flex;
     justify-content: center;
+    margin-bottom: 92px;
 }
 
 .title{
@@ -74,13 +75,12 @@ header{
     height: 557px;
     display: flex;
     justify-content: space-between;
-    margin-top:70px ;
+
 }
 
 .app{
     width: 425px;
     height: 100%;
-    box-shadow: 15px 13px 4px #4C3375;
     border-radius: 28px;
     
     
@@ -100,18 +100,17 @@ header{
 }
 
 .app__title{
-    margin-top: 32px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    padding: 0 32px;
+
 }
 
 .app__title h2{
-    margin-bottom: 26px;
+    padding: 26px;
 }
 
 .app__img{
@@ -631,4 +630,38 @@ footer{
 .img{
     min-width: 200px;
     margin-right: 60px;
+}
+
+
+
+.form_radio_btn {
+	display: inline-block;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+    display: inline-block;
+	cursor: pointer;
+	padding: 20px;
+	line-height: 34px;
+	
+	border-radius: 30px;
+	user-select: none;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
 }
