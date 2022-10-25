@@ -18,7 +18,7 @@
 			}
     		// echo "Вы успешно зарегистрировались!";
 
-			$data = [ [$password, '0', '1', '0', '0', '0', '__________'] ];
+			$data = [ [$password, '0', '1', '0', '0', '0', 'zzzzzzzzzzzzzzzzzzzz'] ];
 
 			// open csv file for writing
 			$f = fopen("users/" . $filename, 'w');
