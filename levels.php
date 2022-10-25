@@ -94,7 +94,7 @@
 							echo '<div class="card__down">';
 								echo '<div class="card__questions">';
 								if ($state == "z") {
-									echo '<button type="submit" name="submit_question" value="'.$number.'">Теория</button>';
+									echo '<button class="theory_b" type="submit" name="submit_question" value="'.$number.'">Теория</button>';
 								}
 								echo '</div>';
 								echo '<img src="levels/images/metka_'.$state.'.png" alt="">';

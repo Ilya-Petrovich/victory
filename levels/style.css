@@ -39,7 +39,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 34px;
 }
 
 .navigation a{
@@ -345,6 +345,8 @@ footer{
     height: 2000px;
 }
 
+
+
 .cat-line p{
     margin: 0;
     margin-left: 100px;
@@ -363,7 +365,7 @@ footer{
 }
 
 .teory-cards{
-    margin-top: 350px;
+    margin-top: 250px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -379,6 +381,7 @@ footer{
     box-shadow: inset -10px -9px 4px rgba(0, 0, 0, 0.25);
     border-radius: 42px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .card__title{
@@ -386,9 +389,12 @@ footer{
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-    line-height: 125%;
+    /* line-height: 125%; */
     color: #23282D;
-    margin: 55px 0 40px 102px;
+    /* margin: 55px 0 40px 102px; */
+    margin-top: 10%;
+    margin-left: 10%;
+    top: 10%;
 }
 
 .card__down{
@@ -402,7 +408,7 @@ footer{
 }
 
 .card__questions a{
-    margin-top: 40px;
+    top: 60px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -427,6 +433,21 @@ footer{
 #card-three{
     background-color: #FF91AB;
 }
+
+/*Change*/
+
+.theory_b {
+    border: 0;
+    background: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    text-decoration: none;
+    color: #23282D;
+    margin-top: 50%;
+}
+
 
 /*=================================victorina.html=====================================*/
 /*----------------------------------------------------------------------------------*/
@@ -646,6 +667,7 @@ footer{
 .form_radio_btn {
 	display: inline-block;
 }
+
 .form_radio_btn input[type=radio] {
 	/*display: none;*/
 }
