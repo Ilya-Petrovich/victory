@@ -1,5 +1,10 @@
 <?php
 	error_reporting(E_ALL);
+
+	if (isset($_POST['submit_continue'])) {
+		header("Location: levels.php");
+	}
+
 	extract($_POST);
 
 	// echo "YES";
@@ -24,7 +29,7 @@
 		$number = $_POST['question'];
 	}
 
-
+	$message = "";
 	// $text = fgets($f, 4096);
 	$text = [];
 	$i = 0;
@@ -68,7 +73,11 @@
 		}
 	}
 	// $correct = $text[5];
-
+	// if (isset($_POST['submit_answer'])) {
+	//
+	// 	echo "&".$correct."&<br>";
+	// 	echo "&".$_POST['answer']."&<br>";
+	// }
 	// foreach ($_POST as $element) {
 	// 	echo "^".$element."^"."<br";
 	// }
@@ -84,12 +93,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="levels/style.css">
     <title>Тестирование</title>
 </head>
-
 <body>
     <header class="lvl__head">
         <div class="container">
@@ -98,104 +104,133 @@
                     <a href="levels.php" class="home">К выбору уровня</a>
                     <a href="">Мой прогресс</a>
                 </div>
-                <a href="" class="exit">Выйти</a>
+				<form action="index.php" method="post">
+					<button type="submit" name="submit_exit">Выйти</button>
+				</form>
             </div>
             <div class="cat-line">
                 <p>ТЕСТИРОВАНИЕ</p>
                 <img src="/images/main_cat 1.png" alt="">
             </div>
-
-<?php
-if (isset($_POST['submit_answer'])) {
-	if (isset($_POST['answer'])) {
-		// echo "=".$correct."=<br>";
-		// echo "=".$_POST['answer']."=<br>";
-
-		if ($_POST['answer'] == $correct) {
-			echo 'CORRECT!';
-			// echo '<div class="true-img">';
-			// 	echo '<img src="/images/happy_base 1.png" alt="">';
-			// echo '</div>';
-			echo '<div class="score">';
-			echo '<div class="score__title">';
-			echo 'ОТВЕТ ВЕРНЫЙ!';
-			echo '</div>';
-			echo '<div class="score__score">';
-			echo 'Твои баллы:';
-			echo '</div>';
-			echo '<div class="score__balls">';
-			echo '+5 баллов';
-			echo '</div>';
-			echo '</div>';
-
-		} else {
-			echo "NOT CORRECT!";
-		}
-	} else {
-		echo "<div>Нужно выбрать ответ!</div>";
-		// header("Location: question.php");
-	}
-} else {
-	echo <<<HTML
-	<div class="test-info">
-		Закрепим пройденный материал. За каждый правильный ответ ты получаешь баллы, за неверный - теряешь сердечки. Будь внимателен!
-	</div>
-	<div class="health-line">
-		КОЛИЧЕСТВО ПОПЫТОК:
-HTML;
-
-	for ($i = 0; $i < $lives; $i++) {
-		echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
-	}
-
-	echo <<<HTML
-	</div>
-	<div class="slider-block">
-		<div class="slider">
-			<div class="owl-carousel owl-theme">
-				<div class="slide">
-					<form action="question.php" method="post">
-						<div class="slide__title">
-HTML;
-							echo $text[1];
-							echo <<<HTML
-						</div>
-						<div class="slide__question">
-							<div class="img">
-								<img src="levels/images/Котик новичок.png" alt="">
-							</div>
-							<div class="question__marks">
-HTML;
-								for ($i = 0; $i < count($text); $i++) {
-									if ($text[$i][0] == "=") {
-										$answer = substr($text[$i], 1);
-										// echo $answer;
-
-										if ($answer[strlen($answer) - 1] != ".") {
-											$answer = substr($answer, 0, strlen($answer) - 1);
+			<div class="test-info">
+				Закрепим пройденный материал. За каждый правильный ответ ты получаешь баллы, за неверный - теряешь сердечки. Будь внимателен!
+			</div>
+			<div class="health-line">
+				КОЛИЧЕСТВО ПОПЫТОК:
+				<?php
+				for ($i = 0; $i < $lives; $i++) {
+					echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
+				}
+				?>
+			</div>
+			<div class="slider-block">
+				<div class="slider">
+					<div class="owl-carousel owl-theme">
+						<div class="slide">
+							<form action="question.php" method="post">
+								<?php
+								$img = "levels/images/Котик новичок.png";
+								if (isset($_POST['submit_answer'])) {
+									if (isset($_POST['answer'])) {
+										$score = 500;
+										$check_answer = $_POST['answer'];
+										while ($check_answer[-1] != ".") {
+											$check_answer = substr($check_answer, 0, strlen($check_answer) - 1);
 										}
-										// echo $answer;
+										// echo "&".$correct."&<br>";
+										//
+										// echo "&".$check_answer."&<br>";
 
-										echo '<div class="mark">';
-											echo '<label class="label-light"><input type="radio" name="answer" value="'.$answer.'" class="input-light">'.$answer.'</label>';
-											echo '<input type="text" name="question" value="'.$number.'" style="display:none">';
-											echo '</div>';
-											// echo substr($text[$i], 1);
+										if ($check_answer == $correct) {
+											$message = "ОТВЕТ ВЕРНЫЙ!";
+											$img = "levels/images/happy_base 1.png";
+											$ans = 1;
+											$add_score = 1; // change value
+
+											// for ($i = 0; $i < count($info); $i++) {
+											// 	echo $info[$i]."<br>";
+											// }
+											$info[6][$number - 1] = "1";
+											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
+											if ($f_info) {
+												$info = (implode(';', $info));
+												fputs($f_info, $info, strlen($info));
+											}
+											fclose($f_info);
+										} else {
+											$message = "ОТВЕТ НЕВЕРНЫЙ!";
+											$img = "levels/images/sad_base 1.png";
+											$ans = 0;
+											$add_score = 0;
+
+											$info[6][$number - 1] = "0";
+											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
+											if ($f_info) {
+												$info = (implode(';', $info));
+												fputs($f_info, $info, strlen($info));
+											}
+											fclose($f_info);
+
+											// echo "NOT CORRECT!";
+										}
+									} else {
+										$message = "Нужно выбрать ответ!";
 									}
 								}
-									// echo '<input type="text" name="number" value="'.$_POST['submit_theory'].'" style="display:none"';
-// echo <<<HTML
 
-}
-?>
+								?>
+								<div class="slide__title">
+									<?php
+										if (!isset($ans)) {
+											echo $text[1];
+										}
+									?>
+								</div>
+								<div class="slide__question">
+									<div class="img">
+										<img src= <?php echo '"'.$img.'"'; ?> alt="">
+									</div>
 
-                            </div>
-                        </div>
-						<div>
-							<button type="submit" name="submit_answer">Ответить</button>
-						</div>
-					</form>
-                </div>
+									<?php
+										if (!isset($ans)) {
+											echo '<div class="question__marks">';
+												for ($i = 2; $i < count($text); $i++) {
+													if ($text[$i][0] == "=") {
+														echo '<div class="mark">';
+															echo '<label class="label-light"><input type="radio" name="answer" value="'.substr($text[$i], 1).'" class="input-light">'.substr($text[$i], 1).'</label>';
+														echo '</div';
+													}
+												}
+                            				echo '</div>';
+											echo '<div>';
+												echo '<input type="text" name="question" value="'.$number.'" style="display:none">';
+												echo '<button type="submit" name="submit_answer">Ответить</button>';
+											echo '</div>';
+										} else {
+											echo '<div class="score">';
+												echo '<div class="score__title">';
+													echo $message;
+												echo '</div>';
+												echo '<div class="score__balls">';
+													echo '+5 баллов';
+												echo '</div>';
+												echo '<div class="score__score">';
+													echo 'Твои баллы: '.$score;
+												echo '</div>';
+											echo '</div>';
+											echo '<div>';
+												echo '<button type="submit" name="submit_continue">Продолжить</button>';
+											echo '</div>';
+
+										}
+									?>
+								<!-- <div>
+									<input type="text" name="question" value="" style="display:none">
+									<button type="submit" name="submit_answer">Ответить</button>
+									<button type="submit" name="submit_continue">Продолжить</button> -->
+								</div>
+							</form>
+                		</div>
                         <!-- <div class="slide">
                             <div class="slide__title-true">
                                 <div class="true-img">
@@ -235,8 +270,26 @@ HTML;
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
 </body>
 </html>
+<!-- for ($i = 0; $i < count($text); $i++) { -->
+<!-- if ($text[$i][0] == "=") {
+	$answer = substr($text[$i], 1);
+	// echo $answer;
+
+	if ($answer[strlen($answer) - 1] != ".") {
+		$answer = substr($answer, 0, strlen($answer) - 1);
+	}
+	// echo $answer;
+
+	echo '<div class="mark">';
+		echo '<label class="label-light"><input type="radio" name="answer" value="'.$answer.'" class="input-light">'.$answer.'</label>';
+		echo '<input type="text" name="question" value="'.$number.'" style="display:none">';
+		echo '</div>';
+		// echo substr($text[$i], 1);
+	}
+} -->
+<!-- // echo '<input type="text" name="number" value="'.$_POST['submit_theory'].'" style="display:none"'; -->
+<!-- // echo <<<HTML -->
