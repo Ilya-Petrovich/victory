@@ -98,11 +98,12 @@
 					<input id="radio-1" type="radio" name="radio" value="1" checked>
 					<label for="radio-1">
 		                <div class="app" id="app-one">
-			                    <div class="app__title">
-									<input type="radio" name="difficulty" style="display:none">
-									<h2>Начинающий</h2>
-			                        Этот котик только начинает свой путь в энергетике, поэтому у него есть целых три попытки!
-			                    </div>
+		                    <div class="app__title">
+								<input id="radio-1" type="radio" name="difficulty" style="display:block">
+								<h2>Начинающий</h2>
+		                        Этот котик только начинает свой путь в энергетике, поэтому у него есть целых три попытки!
+							<!-- </label> -->
+		                    </div>
 							<!-- </form> -->
 		                    <div class="app__img">
 		                        <img src="levels/images/point_1.png" alt="">
