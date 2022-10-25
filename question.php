@@ -1,4 +1,5 @@
 <?php
+	error_reporting(E_ALL);
 	extract($_POST);
 
 	// echo "YES";
@@ -15,10 +16,12 @@
 
 	if (isset($_POST['submit_theory'])) {
 		$f = fopen('tasks/q_'.$_POST['submit_theory'], 'r');
+		$number = $_POST['submit_theory'];
 	}
 
 	if (isset($_POST['submit_answer'])) {
-		$f = fopen('tasks/q_'.$_POST['number'], 'r');
+		$f = fopen('tasks/q_'.$_POST['question'], 'r');
+		$number = $_POST['question'];
 	}
 
 
@@ -66,19 +69,10 @@
 	}
 	// $correct = $text[5];
 
-	foreach ($_POST as $element) {
-		echo "^".$element."^"."<br";
-	}
-
-	// if (isset($_POST['submit_answer'])) {
-	// 	echo "=".$correct."<br>";
-	// 	echo "=".$_POST['answer']."<br>";
-	// 	if ($_POST['answer'] == $correct) {
-	// 		echo "CORRECT!";
-	// 	} else {
-	// 		echo "NOT CORRECT!";
-	// 	}
+	// foreach ($_POST as $element) {
+	// 	echo "^".$element."^"."<br";
 	// }
+
 ?>
 
 <!DOCTYPE html>
@@ -95,6 +89,7 @@
     <link rel="stylesheet" href="levels/style.css">
     <title>Тестирование</title>
 </head>
+
 <body>
     <header class="lvl__head">
         <div class="container">
@@ -109,91 +104,99 @@
                 <p>ТЕСТИРОВАНИЕ</p>
                 <img src="/images/main_cat 1.png" alt="">
             </div>
-            <div class="test-info">
-                Закрепим пройденный материал. За каждый правильный ответ ты получаешь баллы, за неверный - теряешь сердечки. Будь внимателен!
-            </div>
-            <div class="health-line">
-                КОЛИЧЕСТВО ПОПЫТОК:
-				<?php
-					for ($i = 0; $i < $lives; $i++) {
-	                	echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
-					}
-				?>
-            </div>
-            <div class="slider-block">
-                <div class="slider">
-                    <div class="owl-carousel owl-theme">
-                        <div class="slide">
-							<form action="question.php" method="post">
-                            <div class="slide__title">
-								<?php echo $text[1]; ?>
-                            </div>
-                            <div class="slide__question">
-                                <div class="img">
-                                    <img src="levels/images/Котик новичок.png" alt="">
-                                </div>
-                                <div class="question__marks">
-									<?php
-										for ($i = 0; $i < 7; $i++) {
-											if ($text[$i][0] == "=") {
-												echo '<div class="mark">';
-			                                    	echo '<label class="label-light"><input type="radio" name="answer" value="'.substr($text[$i], 1).'" class="input-light">'.substr($text[$i], 1).'</label>';
-			                                    echo '</div>';
-												// echo substr($text[$i], 1);
-											}
-										}
-										// echo '<input type="text" name="number" value="'.$_POST['submit_theory'].'" style="display:none"';
-									?>
-                                </div>
-                            </div>
-							<div>
-								<button type="submit" name="submit_answer">Ответить</button>
+
+<?php
+if (isset($_POST['submit_answer'])) {
+	if (isset($_POST['answer'])) {
+		// echo "=".$correct."=<br>";
+		// echo "=".$_POST['answer']."=<br>";
+
+		if ($_POST['answer'] == $correct) {
+			echo 'CORRECT!';
+			// echo '<div class="true-img">';
+			// 	echo '<img src="/images/happy_base 1.png" alt="">';
+			// echo '</div>';
+			echo '<div class="score">';
+			echo '<div class="score__title">';
+			echo 'ОТВЕТ ВЕРНЫЙ!';
+			echo '</div>';
+			echo '<div class="score__score">';
+			echo 'Твои баллы:';
+			echo '</div>';
+			echo '<div class="score__balls">';
+			echo '+5 баллов';
+			echo '</div>';
+			echo '</div>';
+
+		} else {
+			echo "NOT CORRECT!";
+		}
+	} else {
+		echo "<div>Нужно выбрать ответ!</div>";
+		// header("Location: question.php");
+	}
+} else {
+	echo <<<HTML
+	<div class="test-info">
+		Закрепим пройденный материал. За каждый правильный ответ ты получаешь баллы, за неверный - теряешь сердечки. Будь внимателен!
+	</div>
+	<div class="health-line">
+		КОЛИЧЕСТВО ПОПЫТОК:
+HTML;
+
+	for ($i = 0; $i < $lives; $i++) {
+		echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
+	}
+
+	echo <<<HTML
+	</div>
+	<div class="slider-block">
+		<div class="slider">
+			<div class="owl-carousel owl-theme">
+				<div class="slide">
+					<form action="question.php" method="post">
+						<div class="slide__title">
+HTML;
+							echo $text[1];
+							echo <<<HTML
+						</div>
+						<div class="slide__question">
+							<div class="img">
+								<img src="levels/images/Котик новичок.png" alt="">
 							</div>
-							</form>
-                        </div>
-                        <div class="slide">
-                            <div class="slide__title">
-                                Какой диэлектрик определяет </br> электрическую прочность внешней</br> изоляции(Н2)?
-                            </div>
-                            <div class="slide__question">
-                                <div class="img">
-                                    <img src="/images/Котик новичок.png" alt="">
-                                </div>
-                                <div class="question__marks">
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Неверный вариант ответа.</label>
-                                    </div>
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Неверный вариант ответа.</label>
-                                    </div>
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Атмосферный воздух.</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="slide__title">
-                                Какой диэлектрик определяет </br> электрическую прочность внешней</br> изоляции(Н2)?
-                            </div>
-                            <div class="slide__question">
-                                <div class="img">
-                                    <img src="/images/Котик новичок.png" alt="">
-                                </div>
-                                <div class="question__marks">
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Неверный вариант ответа.</label>
-                                    </div>
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Неверный вариант ответа.</label>
-                                    </div>
-                                    <div class="mark">
-                                        <label class="label-light"><input type="radio" class="input-light">Атмосферный воздух.</label>
-                                    </div>
-                                </div>
+							<div class="question__marks">
+HTML;
+								for ($i = 0; $i < count($text); $i++) {
+									if ($text[$i][0] == "=") {
+										$answer = substr($text[$i], 1);
+										// echo $answer;
+
+										if ($answer[strlen($answer) - 1] != ".") {
+											$answer = substr($answer, 0, strlen($answer) - 1);
+										}
+										// echo $answer;
+
+										echo '<div class="mark">';
+											echo '<label class="label-light"><input type="radio" name="answer" value="'.$answer.'" class="input-light">'.$answer.'</label>';
+											echo '<input type="text" name="question" value="'.$number.'" style="display:none">';
+											echo '</div>';
+											// echo substr($text[$i], 1);
+									}
+								}
+									// echo '<input type="text" name="number" value="'.$_POST['submit_theory'].'" style="display:none"';
+// echo <<<HTML
+
+}
+?>
+
                             </div>
                         </div>
-                        <div class="slide">
+						<div>
+							<button type="submit" name="submit_answer">Ответить</button>
+						</div>
+					</form>
+                </div>
+                        <!-- <div class="slide">
                             <div class="slide__title-true">
                                 <div class="true-img">
                                     <img src="/images/happy_base 1.png" alt="">
@@ -228,8 +231,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                      </div>
+                        </div> -->
+                    </div>
                 </div>
             </div>
 
