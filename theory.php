@@ -52,25 +52,28 @@
         rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="menu">
-                <ul>
-                    <li class="menu-item">
-                        <a href="levels.php">К выбору уровня</a>
-                    </li>
-                    <li class="menu-item-one">
-                        <a href="..">Мой прогресс</a>
-                    </li>
-                    <li class="menu-item-two">
-						<form action="index.php" method="post">
-                        	<button class="exit" type="submit" name="submit_exit">Выйти</button>
-						</form>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+	<div class="page">
+        <div class="shapka">
+    		<header class="header">
+        		<div class="container">
+            		<div class="menu">
+               		<ul>
+                    	<li class="menu-item">
+                        	<a href="levels.php">К выбору уровня</a>
+                    	</li>
+                    	<li class="menu-item-one">
+                        	<a href="..">Мой прогресс</a>
+                    	</li>
+                    	<li class="menu-item-two">
+							<form action="index.php" method="post">
+                        		<button class="exit" type="submit" name="submit_exit">Выйти</button>
+							</form>
+                    	</li>
+                	</ul>
+            	</div>
+    		</header>
+		</div>
+	</div>		
     <section class="hat">
         <h1 class="main-title">ТЕОРИЯ</h1>
         <div class="line-image">
