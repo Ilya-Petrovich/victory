@@ -17,7 +17,10 @@
 		$info = (explode(';', $line));
 	}
 
+	fclose($f_info);
+
 	$lives = $info[1];
+	$rate = $info[2];
 
 	if (isset($_POST['submit_theory'])) {
 		$f = fopen('tasks/q_'.$_POST['submit_theory'], 'r');
@@ -38,6 +41,8 @@
 		$text[$i] = fgets($f);
 		$i++;
 	}
+
+
 	// if (isset($_POST['submit_theory'])) {
 	//
 	// 	for ($i = 1; $i < count($text); $i++) {
@@ -145,7 +150,7 @@
 											$message = "ОТВЕТ ВЕРНЫЙ!";
 											$img = "levels/images/happy_base 1.png";
 											$ans = 1;
-											$add_score = 1; // change value
+											$add_score = 1 * $rate; // change value
 
 											// for ($i = 0; $i < count($info); $i++) {
 											// 	echo $info[$i]."<br>";
@@ -216,7 +221,7 @@
 													echo $message;
 												echo '</div>';
 												echo '<div class="score__balls">';
-													echo '+5 баллов';
+													echo '+ '.$add_score;
 												echo '</div>';
 												echo '<div class="score__score">';
 													echo 'Твои баллы: '.$score;
