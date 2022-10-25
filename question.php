@@ -244,7 +244,7 @@
 												echo '</div>';
 											echo '</div>';
 											echo '<div>';
-												echo '<button type="submit" name="submit_continue">Продолжить</button>';
+												echo '<button class="go" type="submit" name="submit_continue">Продолжить</button>';
 											echo '</div>';
 
 										}

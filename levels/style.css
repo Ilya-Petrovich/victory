@@ -350,7 +350,7 @@ footer{
 .cat-line p{
     margin: 0;
     margin-left: 100px;
-    font-family: 'Roboto Flex';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 96px;
@@ -709,4 +709,14 @@ footer{
     color: #FFFFFF;
     font-size: 36px;
     right: 10px;
+}
+
+.go {
+    border: 0;
+    background: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-top: 80%;
 }
