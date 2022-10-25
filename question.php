@@ -157,9 +157,14 @@
 											// 	echo $info[$i]."<br>";
 											// }
 											$info[4] = $score;
+											// for ($i = 0; $i < count($info); $i++) {
+											// 	echo $info[$i]."<br>";
+											// }
 
-											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
-											$r = fgets($f_info, 100);
+											// $r = fgets($f_info, 100);
+
+
+											$f_info = fopen("users/".$_COOKIE["username"].".csv", "w");
 
 											if ($info[6][$number - 1] == "z") {
 												$info[6][$number - 1] = "1";
@@ -168,6 +173,9 @@
 													fputs($f_info, $info, strlen($info));
 												}
 											}
+											// for ($i = 0; $i < strlen($info); $i++) {
+											// 	echo $info[$i]."<br>";
+											// }
 
 											fclose($f_info);
 										} else {
@@ -177,11 +185,12 @@
 											$add_score = 0;
 
 											$info[6][$number - 1] = "0";
-											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
+											$f_info = fopen("users/".$_COOKIE["username"].".csv", "w");
 											if ($f_info) {
 												$info = (implode(';', $info));
 												fputs($f_info, $info, strlen($info));
 											}
+
 											fclose($f_info);
 
 											// echo "NOT CORRECT!";
