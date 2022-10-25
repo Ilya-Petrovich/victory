@@ -55,6 +55,15 @@ body {
     margin-left: 932px;
 }
 
+.exit {
+    color: #FFFFFF;
+    background: none;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 36px;
+}
+
 .hat {
     height: 271px;
 }
@@ -70,6 +79,7 @@ body {
     font-weight: 400;
     font-size: 96px;
     color: #4C3375;
+    z-index: 10;
 }
 
 .line-image {

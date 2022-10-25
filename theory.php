@@ -64,7 +64,7 @@
                     </li>
                     <li class="menu-item-two">
 						<form action="index.php" method="post">
-                        	<button type="submit" name="submit_exit">Выйти</button>
+                        	<button class="exit" type="submit" name="submit_exit">Выйти</button>
 						</form>
                     </li>
                 </ul>
