@@ -239,7 +239,8 @@ h1 {
     border: 0;
     margin-left: 100px;
     position: relative;
-    top: 180px;
+    bottom: -220px;
+    z-index: 99;
 }
 
 .button:hover {
