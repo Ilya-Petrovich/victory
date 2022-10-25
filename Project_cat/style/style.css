@@ -27,7 +27,8 @@ body {
 
 .menu ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
+
 }
 
 .menu-item-two {
@@ -35,6 +36,7 @@ body {
 }
 
 .menu-item-one a {
+    height: 100px;
     color: #FFFFFF;
     font-size: 36px;
     text-decoration: none;
@@ -53,7 +55,7 @@ body {
 
 .info-title {
     position: absolute;
-    width: 761px;
+    width: 688px;
     height: 220px;
     left: 262px;
     top: 228px;
@@ -67,7 +69,7 @@ body {
 
 .info-image {
     margin-left: 120px;
-    
+
 }
 
 .info-cat {
@@ -80,7 +82,7 @@ body {
 
 .lifes-image {
     position: absolute;
-    width: 499px;
+    width: 688px;
     height: 127px;
     left: 262px;
     top: 1105px;
@@ -112,7 +114,6 @@ body {
     font-weight: 400;
     font-size: 144px;
     line-height: 169px;
-    text-decoration-line: underline;
     color: #000000;
 }
 
@@ -172,4 +173,14 @@ body {
 .button:hover {
     cursor: pointer;
     background: #ff7596;
+}
+
+.exit {
+    margin-right: 1000px;
+    color: white;
+    background: none;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 36px;
 }

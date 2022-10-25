@@ -11,7 +11,12 @@
 		if (empty($username) or empty($password)) {
 			echo "Нужно ввести название команды и указать пароль!";
 		} else {
-			$filename = $username . ".csv";
+      if (strlen($username) <= 50) {
+        $filename = $username . ".csv";
+      }
+      else {
+        $filename = substr($username, 0, 50).".csv";
+      }
 
 			if (@fopen("users/" . $filename, "r")) {
 				die ("Команда с таким названием уже зарегистрирована.");

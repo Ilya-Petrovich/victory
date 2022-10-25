@@ -39,7 +39,7 @@
                     </li>
                     <li class="menu-item-two">
 						<form action="index.php" method="post">
-                        	<button type="submit" name="submit_exit">Выйти</button>
+                        	<button class="exit" type="submit" name="submit_exit">Выйти</button>
 						</form>
                     </li>
                 </ul>
@@ -49,15 +49,23 @@
     <section class="main">
         <div class="container">
             <div class="info">
-                <h1 class="info-title">ИМЯ КОТЁНКА</h1>
+                <h1 class="info-title" align="center">  <?php echo $_COOKIE["username"] ?>  </h1>
                 <div class="info-image">
                     <img src="../Project_cat/image/avatar.png" alt="background">
                 </div>
                 <div class="info-cat">
                     <img src="../Project_cat/image/comp_base.png" alt="main-cat">
                 </div>
-                <div class="lifes-image">
-                    <img src="../Project_cat/image/lifes.png" alt="lifes">
+                <div class="lifes-image" align="center">
+									<?php
+									$lives = $info[1];
+									$rate = $info[2];
+
+
+									for ($i = 0; $i < $lives; $i++) {
+										echo '<img src="levels/images/point_'.$rate.'.png" alt="" style="width:100px;"> ';
+									} ?>
+                    <!-- <img src="../Project_cat/image/lifes.png" alt="lifes"> -->
                 </div>
                 <div class="top">
                     <h3 class="my-point">Мой счёт</h3>
