@@ -156,11 +156,13 @@
 											// for ($i = 0; $i < count($info); $i++) {
 											// 	echo $info[$i]."<br>";
 											// }
-											$info[6][$number - 1] = "1";
 											$info[4] = $score;
+
 											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
 											$r = fgets($f_info, 100);
+
 											if ($info[6][$number - 1] == "z") {
+												$info[6][$number - 1] = "1";
 												if ($f_info) {
 													$info = (implode(';', $info));
 													fputs($f_info, $info, strlen($info));
