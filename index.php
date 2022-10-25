@@ -4,11 +4,13 @@
 	if (isset($_POST['submit_exit'])) {
 		SetCookie("username", "");
 	} else {
-		$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
-
-		if ($f) {
-			header('Location: personal_page.php');
+		if (isset($_COOKIE["username"])) {
+			$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
+			if ($f) {
+				header('Location: personal_page.php');
+			}
 		}
+
 	}
 ?>
 
