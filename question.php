@@ -197,7 +197,7 @@
 												for ($i = 2; $i < count($text); $i++) {
 													if ($text[$i][0] == "=") {
 														echo '<div class="mark">';
-															echo '<label class="label-light"><input type="radio" name="answer" value="'.substr($text[$i], 1).'" class="input-light">'.substr($text[$i], 1).'</label>';
+															echo '<label class="label-light" style="width:1000px"><input type="radio" name="answer" value="'.substr($text[$i], 1).'" class="input-light" style="width:40px; height:40px; flex-shrink:0">'.substr($text[$i], 1).'</label>';
 														echo '</div';
 													}
 												}
