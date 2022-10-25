@@ -1,4 +1,5 @@
 <?php
+	error_reporting(E_ALL);
 	extract($_POST);
 
 	// echo "YES";
@@ -15,10 +16,12 @@
 
 	if (isset($_POST['submit_theory'])) {
 		$f = fopen('tasks/q_'.$_POST['submit_theory'], 'r');
+		$number = $_POST['submit_theory'];
 	}
 
 	if (isset($_POST['submit_answer'])) {
-		$f = fopen('tasks/q_'.$_POST['number'], 'r');
+		$f = fopen('tasks/q_'.$_POST['question'], 'r');
+		$number = $_POST['question'];
 	}
 
 
@@ -66,19 +69,25 @@
 	}
 	// $correct = $text[5];
 
-	foreach ($_POST as $element) {
-		echo "^".$element."^"."<br";
-	}
-
-	// if (isset($_POST['submit_answer'])) {
-	// 	echo "=".$correct."<br>";
-	// 	echo "=".$_POST['answer']."<br>";
-	// 	if ($_POST['answer'] == $correct) {
-	// 		echo "CORRECT!";
-	// 	} else {
-	// 		echo "NOT CORRECT!";
-	// 	}
+	// foreach ($_POST as $element) {
+	// 	echo "^".$element."^"."<br";
 	// }
+
+	if (isset($_POST['submit_answer'])) {
+		if (isset($_POST['answer'])) {
+		// echo "=".$correct."=<br>";
+		// echo "=".$_POST['answer']."=<br>";
+
+			if ($_POST['answer'] == $correct) {
+				echo "CORRECT!";
+			} else {
+				echo "NOT CORRECT!";
+			}
+		} else {
+			echo "<div>Нужно выбрать ответ!</div>";
+			// header("Location: question.php");
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -134,10 +143,19 @@
                                 </div>
                                 <div class="question__marks">
 									<?php
-										for ($i = 0; $i < 7; $i++) {
+										for ($i = 0; $i < count($text); $i++) {
 											if ($text[$i][0] == "=") {
+												$answer = substr($text[$i], 1);
+												// echo $answer;
+
+												if ($answer[strlen($answer) - 1] != ".") {
+													$answer = substr($answer, 0, strlen($answer) - 1);
+												}
+												// echo $answer;
+
 												echo '<div class="mark">';
-			                                    	echo '<label class="label-light"><input type="radio" name="answer" value="'.substr($text[$i], 1).'" class="input-light">'.substr($text[$i], 1).'</label>';
+			                                    	echo '<label class="label-light"><input type="radio" name="answer" value="'.$answer.'" class="input-light">'.$answer.'</label>';
+													echo '<input type="text" name="question" value="'.$number.'" style="display:none">';
 			                                    echo '</div>';
 												// echo substr($text[$i], 1);
 											}
