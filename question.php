@@ -21,6 +21,7 @@
 
 	$lives = $info[1];
 	$rate = $info[2];
+	$score = $info[4];
 
 	if (isset($_POST['submit_theory'])) {
 		$f = fopen('tasks/q_'.$_POST['submit_theory'], 'r');
@@ -137,7 +138,7 @@
 								$img = "levels/images/Котик новичок.png";
 								if (isset($_POST['submit_answer'])) {
 									if (isset($_POST['answer'])) {
-										$score = 500;
+										// $score = 500;
 										$check_answer = $_POST['answer'];
 										while ($check_answer[-1] != ".") {
 											$check_answer = substr($check_answer, 0, strlen($check_answer) - 1);
@@ -151,11 +152,12 @@
 											$img = "levels/images/happy_base 1.png";
 											$ans = 1;
 											$add_score = 1 * $rate; // change value
-
+											$score = $score + $add_score;
 											// for ($i = 0; $i < count($info); $i++) {
 											// 	echo $info[$i]."<br>";
 											// }
 											$info[6][$number - 1] = "1";
+											$info[4] = $score;
 											$f_info = fopen("users/".$_COOKIE["username"].".csv", "r+");
 											$r = fgets($f_info, 100);
 											if ($info[6][$number - 1] == "z") {
