@@ -76,13 +76,16 @@ if (isset($_POST['submit_diff'])) {
 </head>
 
 <body>
-	<form action="index.php" method="post">
-		<button class="exit" type="submit" name="submit_exit">Выйти</button>
-	</form>
-	<form action="difficulty.php" method="post">
+
 		<header>
 			<div class="container">
 				<div class="navigation">
+					<div class="nav-e">
+						<form action="index.php" method="post">
+							<button class="exit" type="submit" name="submit_exit">Выйти</button>
+						</form>
+						<form action="difficulty.php" method="post">
+					</div>
 				</div>
 				<!-- <form -->
 				<div class="head__title">

@@ -170,11 +170,13 @@ main{
 }
 
 .info{
+    color: #FFFFFF;     /*Change 25.10.22*/
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 125%;
+    margin-top: 50%;
+    /* line-height: 125%; */
 }
 
 .info p{
@@ -184,7 +186,7 @@ main{
     font-weight: 600;
     font-size: 72px;
     line-height: 86px;
-    color: #4C3375;
+    color: #FFFFFF /*Change 25.10.22*/
 }
 
 #info-p{
@@ -193,7 +195,7 @@ main{
     font-weight: 600;
     font-size: 96px;
     line-height: 115px;
-    color: #4C3375;
+    color: #FFFFFF;  /*Change 25.10.22*/
     margin: 122px 0 37px 0;
 }
 
@@ -226,11 +228,12 @@ main{
 footer{
     width: 100%;
     height: 229px;
-    background-image: url(/images/Frame\ 2.png);
+    background-image: url("../levels/images/Frame 2.png");
     background-color: #4C3375;
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 20%; /*Change 25.10.22*/
 }
 
 .btn__start{
@@ -726,4 +729,8 @@ footer{
 
 .dif_footer {
     background-image: url("../levels/images/Frame 2.png");
+}
+
+.nav-e {
+    margin-left: 90%;
 }

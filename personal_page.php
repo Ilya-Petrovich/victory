@@ -38,8 +38,7 @@
 											<form action="index.php" method="post">
 												  <button class="exit" type="submit" name="submit_exit">Выйти</button>
 											</form>
-							</divК выбору уровня
-            </div>
+							
         </div>
     </header>
     <section class="main">
