@@ -34,7 +34,7 @@
         <div class="container">
             <div class="menu">
 							<div class="navigation">
-											<a href=".." style="text-decoration:none; width:1500px">К выбору уровня</a>
+											<a href="levels.php" style="text-decoration:none; width:1500px">К выбору уровня</a>
 											<form action="index.php" method="post">
 												  <button class="exit" type="submit" name="submit_exit">Выйти</button>
 											</form>
@@ -66,15 +66,51 @@
                 <div class="top">
                     <h3 class="my-point">Мой счёт</h3>
 					<?php echo '<h3 class="point">'.$score.'</h3>'; ?>
-                    <h3 class="leaders">Таблица лидеров</h3>
+                    <!-- <h3 class="leaders">Таблица лидеро</h3> -->
+										<h1 class="leaders" align="left" style="width:auto; left:1110px; right:0; top:-200px">
+							<?php
+								$dir = opendir('users/');
+								$index = 1;
+
+								$results = [];
+
+								// read users file
+								$res_file = fopen("results.csv", "r+");
+								if ($res_file) {
+									for ($i = 0; $i < 15; $i++) {
+										$line = explode(";", fgets($res_file, 100));
+										array_push($results, $line);
+										// echo ($i + 1).". ".$line."<br>";
+									}
+								}
+
+
+								// read users file
+								while(($f = readdir($dir)) !== false) {
+									if($f != '.' && $f != '..') {
+										$team = substr($f, 0, strlen($f) - 4);
+										// array_push($results, $team);
+										// echo $index.". ".$team."<br>";
+										$index++;
+									}
+								}
+
+								// show results
+								echo "<table>";
+								for ($i = 0; $i < count($results); $i++) {
+									echo "<tr>";
+									if ($results[$i][0] != "-") {
+										echo '<td style="width:500px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+									}
+									echo "</tr>";
+								}
+								echo "</table>";
+											?>
+						</h1>
                     <div class="top-image">
-                        <img src="../Project_cat/image/1.png" alt="first">
-                        <img src="../Project_cat/image/2.png" alt="second">
-                        <img src="../Project_cat/image/3.png" alt="third">
-                        <div class="skip">
+                        <!-- <div class="skip">
                             <img src="../Project_cat/image/propusk.png" alt="propusk">
-                        </div>
-                        <img src="../Project_cat/image/defolt.png" alt="defolt">
+                        </div> -->
                     </div>
                 </div>
             </div>
