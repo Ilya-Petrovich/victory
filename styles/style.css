@@ -446,18 +446,26 @@ footer{
 /*Change*/
 
 .theory_b {
-    border: 0;
+    /* border: 1px solid #23282D; */
+    border: 2px solid #4C3375;
     border-radius: 10px;
-    background: #fff;
+    background: #b8b8b8;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 36px;
     text-decoration: none;
     color: #23282D;
+    /* color: #23282D; */
 /*    margin-top: 50%;*/
     margin-bottom: 50px;
+    width: 200px;
     
+}
+
+.theory_b:hover {
+    cursor: pointer;
+    background: #e0dede;
 }
 
 
