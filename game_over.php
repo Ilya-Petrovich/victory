@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="levels/style.css">
+    <link rel="stylesheet" href="styles/game_over_style.css">
     <title>Конец игры</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
                 Упс! Игра окончена, но это лишь повод ещё лучше усвоить пройденный материал. </br> Повторение - мать учения, не сдавайся!
             </div>
             <div class="end__img">
-                <img src="/images/sad_cosmo 1.png" alt="">
+                <img src="images/sad_cosmo 1.png" alt="">
             </div>
             <!-- <div class="btn__restart">
                 <a href="">Попровать снова</a>
