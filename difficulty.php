@@ -1,4 +1,8 @@
 <?php
+if (!isset($_COOKIE["username"])) {
+	header("Location: index.php");
+}
+
 $message = 'Выбери котика-инженера!';
 // require_once 'levels.php';
 extract($_POST);

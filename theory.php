@@ -1,4 +1,8 @@
 <?php
+if (!isset($_COOKIE["username"])) {
+	header("Location: index.php");
+}
+
 	// require_once 'question.php';
 
 	$tasks = scandir('tasks');

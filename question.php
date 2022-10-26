@@ -1,4 +1,8 @@
 <?php
+if (!isset($_COOKIE["username"])) {
+	header("Location: index.php");
+}
+
 	error_reporting(E_ALL);
 
 	if (isset($_POST['submit_continue'])) {
