@@ -8,9 +8,9 @@ $message = 'Выбери котика-инженера!';
 extract($_POST);
 
 if (isset($_POST['submit_diff'])) {
-	echo "YES";
+	// echo "YES";
 	if (isset($_POST['difficulty'])) {
-		echo $_POST['difficulty'];
+		// echo $_POST['difficulty'];
 
 		// here we save difficulty in team's files
 		// echo $_COOKIE["username"];
