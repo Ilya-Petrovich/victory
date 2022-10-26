@@ -125,7 +125,7 @@
 				КОЛИЧЕСТВО ПОПЫТОК:
 				<?php
 				for ($i = 0; $i < $lives; $i++) {
-					echo '<img src="images/point_'.$lives.'.png" alt="">';
+					echo '<img src="images/point_'.$rate.'.png" alt="">';
 				}
 				?>
 			</div>
