@@ -20,7 +20,7 @@ if (!isset($_COOKIE["username"])) {
 
 	if ($info[1] == 0) {
 		echo "GAME OVER!";
-		// header("Location: game_over.php");
+		header("Location: game_over.php");
 	}
 	// for ($i = 0; $i < 10; $i++) {
 	// 	echo $info[6][$i]."<br>";
