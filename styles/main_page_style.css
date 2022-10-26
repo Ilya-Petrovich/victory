@@ -15,37 +15,46 @@ body{
     background-position: center;
     background-size: cover;
     height: 843px;
-    width: 1920px;
+    width: 100%;
     background-color: #4C3375;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    
 }
+.wrapper{
+    width: 1920px;
+    display:flex;
+    padding-top: 0px;
+}   
 
 .main-title {
     font-weight: bold;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 144px;
-    height: 345px;
     width: 822px;
     font-family: Exo 2;
     margin-left: 120px;
+    
 }
 
 .main-text {
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 64px;
+    font-size: 58px;
     font-weight: 400;
-
     text-align: left;
     height: 177px;
     width: 739px;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin: 50px 13%;
 
 }
 
 .cat {
-    width: 1920px;
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -55,8 +64,6 @@ body{
     width: 331px;
     height: 98px;
     left: 120px;
-    top: 794px;
-    margin-top: 270px;
     border-radius: 19px;
     border: 0;
     font-weight: 400;
@@ -94,12 +101,8 @@ body{
 }
 
 .main-image-cat {
-    position: absolute;
-    bottom: 0;
     width: 949px;
     height: 962px;
-    left: 900px;
-    top: 175px;
 }
 
 .info-title {
@@ -118,18 +121,17 @@ body{
     font-weight: 400;
     font-size: 64px;
     text-align: center;
-    margin-top: 194px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 100px;
 }
 
 .levels {
     background-image: url("../images/Frame3.png");
-    width: 1920px;
-    height: 1500px;
+    height: 1650px;
     left: 0px;
     top: 2313px;
     background-color: #4C3375;
+    display: flex;
+    justify-content: center;
 }
 
 .sub-title {
