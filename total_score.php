@@ -45,7 +45,7 @@
         </div>
     </header>
     <section class="main">
-        <div class="container" style="background-image:url('images/avatar.png');height: 1280px; width: 1680px; margin-left:115px">
+        <div class="container" style="background-image:url('images/avatar.png');height: 900px; width: 1680px; margin-left:115px">
             <div class="info" align="center">
                 <div class="info-image">
                 	<h3 class="leaders" style="position:relative; left:0; top:10%; padding-top:50px">Таблица лидеров</h3>
@@ -68,16 +68,16 @@
 							}
 						}
 
-						// show results
-						echo "<table>";
-						for ($i = 0; $i < count($results); $i++) {
-							echo "<tr>";
-							if ($results[$i][0] != "-") {
-								echo '<td style="width:1300px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
-							}
-							echo "</tr>";
-						}
-						echo "</table>";
+						// // show results
+						// echo "<table>";
+						// for ($i = 0; $i < count($results); $i++) {
+						// 	echo "<tr>";
+						// 	if ($results[$i][0] != "-") {
+						// 		echo '<td style="width:1300px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+						// 	}
+						// 	echo "</tr>";
+						// }
+						// echo "</table>";
 
 
 						// read users files
@@ -88,23 +88,25 @@
 								$file = fopen("users/".$f, "r");
 								$text = fgets($file, 100);
 								$text = explode(";", $text);
-								$a = array($text[4], $text[7]);
+								$a = array($text[4], $text[7], $team);
 								array_push($new_res, $a);
-								echo $a[0]." ".$a[1]."<br>";
-								echo filemtime("users/".$f);
-								// array_push($new_res, $team);
-								// array_push($results, $team);
-								// echo $index.". ".$team."<br>";
+								// echo $a[0]." ".$a[1]." ".$a[2]."<br>";
 								$index++;
 							}
 						}
+
+						sort($new_res);
+
+						// for ($i = 0; $i < count($new_res); $i++) {
+						// 	echo $new_res[$i][0]." ".$new_res[$i][1]." ".$new_res[$i][2]."<br>";
+						// }
 
 						// show results
 						echo "<table>";
 						for ($i = 0; $i < count($new_res); $i++) {
 							echo "<tr>";
-							if ($new_res[$i][0] != "-") {
-								echo '<td style="width:1300px">'.($i + 1).'. '.$new_res[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+							if ($new_res[$i][2][0] != "-") {
+								echo '<td style="width:1300px">'.($i + 1).'. '.$new_res[$i][2].'</td><td >'.$new_res[$i][0].'</td>';
 							}
 							echo "</tr>";
 						}
