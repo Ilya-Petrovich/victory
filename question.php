@@ -139,7 +139,7 @@ if (!isset($_COOKIE["username"])) {
 						<div class="slide">
 							<form action="question.php" method="post">
 								<?php
-								$img = "images/Котик новичок.png";
+								$img = "images/cat_newbie.png";
 								if (isset($_POST['submit_answer'])) {
 									if (isset($_POST['answer'])) {
 										// $score = 500;
