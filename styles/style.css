@@ -369,7 +369,7 @@ footer{
 .cat-line img{
     position: absolute;
     right: 300px;
-    margin-top: 20px;
+    margin-top: 250px;
 }
 
 .teory-cards{
@@ -754,4 +754,91 @@ footer{
 .menu ul {
     margin-left: 90%;
     list-style: none;
+}
+
+/*---login_page--*/
+
+.login{
+    background-image: url("../images/avatar.png");
+    background-position: center;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 20%;
+    top: 25%;
+    border-radius: 28px;
+}
+
+.input_i {
+    /* font-family: 'Roboto';
+    font-style: normal; */
+    color: #000000;
+    text-align: center;
+    font-weight: 400;
+    font-size: 48px;
+    margin-top: 10%;
+}
+
+.team {
+    color: #000000;
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 10%;
+    margin-left: 0;
+}
+
+.pas {
+    color: #000000;
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+.vvod_one {
+    padding: 20px 60px;
+    width: 344px;
+    background: #FFFFFF;
+    border: 1px solid #5D5D5F;
+    border-radius: 28px;
+    font-size: 36px;
+    color: #000000;
+    outline: none;
+}
+
+.input_a {
+    max-width: 450px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    
+}
+
+.come_in {
+    border: 0;
+    background: #4C3375;
+    width: 400px;
+    border: 0;
+    border-radius: 28px;
+    /* font-family: 'Roboto';
+    font-style: normal; */
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 48px;
+    margin-left: 7%;
+    /* margin-bottom: 15%; */
+}
+
+.come_in_i {
+    border: 0;
+    background: #4C3375;
+    width: 380px;
+    /* height: 80px; */
+    border: 0;
+    border-radius: 28px;
+    /* font-family: 'Roboto';
+    font-style: normal; */
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 36px;
+    margin-left: 10%;
+    
 }
