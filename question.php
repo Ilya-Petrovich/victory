@@ -168,6 +168,8 @@
 
 											if ($info[6][$number - 1] == "z") {
 												$info[6][$number - 1] = "1";
+												$info[7] = filemtime("users/".$_COOKIE["username"].".csv");
+
 												if ($f_info) {
 													$info = (implode(';', $info));
 													fputs($f_info, $info, strlen($info));
