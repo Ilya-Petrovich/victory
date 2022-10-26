@@ -23,7 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats_energy</title>
-    <link rel="stylesheet" href="../Project_cat/style/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 	<!-- <link rel="stylesheet" href="levels/style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" style="padding-bottom: 20px;">
         <div class="container">
             <div class="menu">
                 <ul>
@@ -45,13 +45,13 @@
         </div>
     </header>
     <section class="main">
-        <div class="container">
+        <div class="container" style="background-image:url('images/avatar.png');height: 1280px; width: 1680px; margin-left:115px">
             <div class="info" align="center">
-                <div class="info-image" style="background-image:url('../Project_cat/image/avatar.png');height: 1280px; width: 1680px">
-                	<h3 class="leaders" style="position:relative; left:0; top:5%">Таблица лидеров</h3>
+                <div class="info-image">
+                	<h3 class="leaders" style="position:relative; left:0; top:10%; padding-top:50px">Таблица лидеров</h3>
                     <!-- <img src="../Project_cat/image/avatar.png" alt="background"> -->
                 </div>
-                <h1 class="leaders" align="left" style="width:auto; left:300px; right:0; top:270px">
+                <h1 class="leaders" align="left" style="width:auto; position:relative; left:150px; right:0; top:0px">
 					<?php
 						$dir = opendir('users/');
 						$index = 1;
@@ -68,8 +68,19 @@
 							}
 						}
 
+						// show results
+						echo "<table>";
+						for ($i = 0; $i < count($results); $i++) {
+							echo "<tr>";
+							if ($results[$i][0] != "-") {
+								echo '<td style="width:1300px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+							}
+							echo "</tr>";
+						}
+						echo "</table>";
 
-						// read users file
+
+						// read users files
 						while(($f = readdir($dir)) !== false) {
 							if($f != '.' && $f != '..') {
 								$team = substr($f, 0, strlen($f) - 4);
