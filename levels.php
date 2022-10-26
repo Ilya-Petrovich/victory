@@ -2,25 +2,20 @@
 if (!isset($_COOKIE["username"])) {
 	header("Location: index.php");
 }
-
-// 	// require_once 'theory.php';
-//
 	$tasks = scandir('tasks');
-	// $i = 0;
 	$questions = [];
-
 	$f = fopen("users/".$_COOKIE["username"].".csv", "r+");
-
 	if ($f) {
 		$line = fgets($f, 100);
 		rewind($f);
 		$info = (explode(';', $line));
-		// echo $info[6]."<br>";
 	}
-
 	if ($info[1] == 0) {
-		echo "GAME OVER!";
+		// echo "GAME OVER!";
 		header("Location: game_over.php");
+	}
+	if ($info[6] == "11111111111111111111") {
+		header("Location: game_over_2.php");
 	}
 	// for ($i = 0; $i < 10; $i++) {
 	// 	echo $info[6][$i]."<br>";
