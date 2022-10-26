@@ -57,9 +57,13 @@ body{
     justify-content: center;
 }
 
+.main-action a {
+    color: #FFFFFF;
+}
 
 
 .button1 {
+    /* background: none; */
     background-color: #FFD600;
     width: 331px;
     height: 98px;

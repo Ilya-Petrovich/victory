@@ -139,7 +139,7 @@ if (!isset($_COOKIE["username"])) {
 						<div class="slide">
 							<form action="question.php" method="post">
 								<?php
-								$img = "images/Котик новичок.png";
+								$img = "images/cat_newbie.png";
 								if (isset($_POST['submit_answer'])) {
 									if (isset($_POST['answer'])) {
 										// $score = 500;
@@ -210,10 +210,15 @@ if (!isset($_COOKIE["username"])) {
 								}
 
 								?>
-								<div class="slide__title">
+								<div class="slide__title" style="display:grid; align-content:center">
 									<?php
 										if (!isset($ans)) {
 											echo $text[1];
+											if ($text[2][0] == "$") {
+												// echo $text[2];
+												// echo "<br>".substr($text[2], 2, strlen($text[2]) - 5);
+												echo '<img src="tasks/'.substr($text[2], 2, strlen($text[2]) - 5).'" alt="">';
+											}
 										}
 									?>
 								</div>

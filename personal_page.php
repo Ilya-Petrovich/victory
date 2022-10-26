@@ -1,6 +1,6 @@
 <?php
 	if (!isset($_COOKIE["username"])) {
-		// header("Location: index.php");
+		header("Location: index.php");
 	}
 
 	// $tasks = scandir('tasks');
@@ -93,14 +93,14 @@
 													$file = fopen("users/".$f, "r");
 													$text = fgets($file, 100);
 													$text = explode(";", $text);
-													$a = array($text[4], $text[7], $team);
+													$a = array($text[4], 2000000000 - $text[7], $team);
 													array_push($new_res, $a);
 													// echo $a[0]." ".$a[1]." ".$a[2]."<br>";
 													$index++;
 												}
 											}
 
-											sort($new_res);
+											rsort($new_res);
 
 											// for ($i = 0; $i < count($new_res); $i++) {
 											// 	echo $new_res[$i][0]." ".$new_res[$i][1]." ".$new_res[$i][2]."<br>";
