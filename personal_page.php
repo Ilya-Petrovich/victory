@@ -44,7 +44,7 @@
     </header>
     <section class="main">
         <div class="container">
-            <div class="info" style="background-image:url('images/avatar.png'); width:1680px; height:1100px; margin-left:115px">
+            <div class="info" style="background-image:url('images/avatar.png'); width:1680px; height:1100px; margin-left:115px; border-radius: 38px">
             <!-- <div class="info" style"background-color:#121212"> -->
 				<table>
 					<tr>
