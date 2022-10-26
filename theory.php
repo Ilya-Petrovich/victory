@@ -77,10 +77,10 @@
     <section class="hat">
         <h1 class="main-title">ТЕОРИЯ</h1>
         <div class="line-image">
-            <img src="theory/images/bold line.png" alt="podlozhka">
+            <img src="images/bold line.png" alt="podlozhka">
         </div>
         <div class="first-image">
-            <img src="theory/images/main_cat.png" alt="first image">
+            <img src="images/main_cat.png" alt="first image">
         </div>
     </section>
     <section class="texts-form">
@@ -93,7 +93,7 @@
 			if ($i == 0) {
 				echo '<h1 class="sub-title">'.$text[$i].'</h1>';
 				echo '<div class="just-line-image">';
-					echo '<img src="theory/images/line.png" alt="line">';
+					echo '<img src="images/line.png" alt="line">';
 				echo '</div>';
 			} else {
 				echo '<div class="just-text">';
@@ -118,7 +118,7 @@
     </section>
 	<footer class="footer">
         	<div class="end-image">
-            	<img src="theory/images/end-cat.png" alt="end image">
+            	<img src="images/end-cat.png" alt="end image">
         	</div>
 	</footer>
 </body>

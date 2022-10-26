@@ -151,7 +151,7 @@
 											$message = "ОТВЕТ ВЕРНЫЙ!";
 											$img = "images/happy_base 1.png";
 											$ans = 1;
-											$add_score = 1 * $rate; // change value
+											$add_score = 5 * $rate; // change value
 											$score = $score + $add_score;
 											// for ($i = 0; $i < count($info); $i++) {
 											// 	echo $info[$i]."<br>";
