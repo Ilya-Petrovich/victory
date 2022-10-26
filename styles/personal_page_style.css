@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../image/Frame.png");
+    background-color: #4C3375;
+
+}
+
+.header {
+    height: 116px;
+}
+
+.menu {
+    margin-left: 120px;
+    position: absolute;
+    width: 1688px;
+    height: 82px;
+    top: 34px;
+}
+
+.menu ul {
+    list-style: none;
+    /* display: flex; */
+
+}
+
+.menu-item-two {
+    margin-bottom: 34px;
+    margin-left: 1400px;
+}
+
+.menu-item-one a {
+    height: 100px;
+    color: #FFFFFF;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.menu-item-two a {
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.main {
+    background-position: center;
+    background-size: cover;
+}
+
+
+.info-title {
+    position: absolute;
+    width: 688px;
+    height: 220px;
+    left: 262px;
+    top: 150px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 115px;
+    color: #000000;
+}
+
+.info-image {
+    margin-left: 120px;
+
+}
+
+.info-cat {
+    position: absolute;
+    width: 688px;
+/*    height: 662px;*/
+    left: 262px;
+    top: 300px;
+}
+
+.lifes-image {
+    position: absolute;
+    width: 688px;
+    height: 127px;
+    left: 262px;
+    top: 800px;
+}
+
+
+.my-point {
+    position: absolute;
+    width: 500px;
+    height: 85px;
+    left: 1114px;
+    top: 150px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000000;
+}
+
+.point {
+    position: absolute;
+    width: 500px;
+    height: 175px;
+    left: 1112px;
+    top: 250px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 144px;
+    line-height: 169px;
+    color: #000000;
+}
+
+.leaders {
+    position: absolute;
+    width: 488px;
+    height: 85px;
+    left: 1114px;
+    top: 700px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000000;
+}
+
+.top-image {
+    position: absolute;
+    width: 551px;
+    height: 633px;
+    left: 1092px;
+    top: 723px;
+}
+
+.skip {
+    margin-top: 43px;
+    margin-left: 240px;
+    margin-bottom: 41px;
+}
+
+.action {
+    height: 332px;
+}
+
+.button {
+    position: absolute;
+    width: 490px;
+    height: 189px;
+    left: 715px;
+    top: 1516px;
+    background: #FF91AB;
+    border-radius: 43px;
+    border: 0;
+    box-shadow: inset -9px -10px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 75px;
+
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 115px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #ff7596;
+}
+
+.exit {
+    margin-right: 10px;
+    color: white;
+    background: none;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 36px;
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.navigation a{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    transition: 10s;
+
+}
+
+.navigation a:hover{
+    text-decoration: none;
+}

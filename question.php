@@ -99,7 +99,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="levels/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Тестирование</title>
 </head>
 <body>
@@ -116,7 +116,7 @@
             </div>
             <div class="cat-line">
                 <p>ТЕСТИРОВАНИЕ</p>
-                <img src="/images/main_cat 1.png" alt="">
+                <img src="images/main_cat 1.png" alt="">
             </div>
 			<div class="test-info">
 				Закрепим пройденный материал. За каждый правильный ответ ты получаешь баллы, за неверный - теряешь сердечки. Будь внимателен!
@@ -125,7 +125,7 @@
 				КОЛИЧЕСТВО ПОПЫТОК:
 				<?php
 				for ($i = 0; $i < $lives; $i++) {
-					echo '<img src="levels/images/point_'.$lives.'.png" alt="">';
+					echo '<img src="images/point_'.$lives.'.png" alt="">';
 				}
 				?>
 			</div>
@@ -135,7 +135,7 @@
 						<div class="slide">
 							<form action="question.php" method="post">
 								<?php
-								$img = "levels/images/Котик новичок.png";
+								$img = "images/Котик новичок.png";
 								if (isset($_POST['submit_answer'])) {
 									if (isset($_POST['answer'])) {
 										// $score = 500;
@@ -149,7 +149,7 @@
 
 										if ($check_answer == $correct) {
 											$message = "ОТВЕТ ВЕРНЫЙ!";
-											$img = "levels/images/happy_base 1.png";
+											$img = "images/happy_base 1.png";
 											$ans = 1;
 											$add_score = 1 * $rate; // change value
 											$score = $score + $add_score;
@@ -180,7 +180,7 @@
 											fclose($f_info);
 										} else {
 											$message = "ОТВЕТ НЕВЕРНЫЙ!";
-											$img = "levels/images/sad_base 1.png";
+											$img = "images/sad_base 1.png";
 											$ans = 0;
 											$add_score = 0;
 
@@ -232,7 +232,7 @@
 												echo '<button class="answer" type="submit" name="submit_answer">Ответить</button>';
 											echo '</div>';
 										} else {
-											echo '<div class="score">';
+											echo '<div class="score" style="width:500px; display:grid; align-content:center">';
 												echo '<div class="score__title">';
 													echo $message;
 												echo '</div>';
@@ -242,9 +242,9 @@
 												echo '<div class="score__score">';
 													echo 'Твои баллы: '.$score;
 												echo '</div>';
+												echo '<button class="go" type="submit" name="submit_continue">Продолжить</button>';
 											echo '</div>';
 											echo '<div>';
-												echo '<button class="go" type="submit" name="submit_continue">Продолжить</button>';
 											echo '</div>';
 
 										}

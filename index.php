@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENERGY CAT GAME</title>
-    <link rel="stylesheet" href="main_page/style/style.css">
+    <link rel="stylesheet" href="styles/main_page_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
 				</a>
             </div>
             <div class="main-image-cat">
-                <img src="main_page/images/main_cat1.png" alt="Main image">
+                <img src="images/main_cat1.png" alt="Main image">
             </div>
         </div>
     </section>
@@ -71,7 +71,7 @@
             <div class="cat-items">
                 <div class="cat-item">
                     <div class="cat-item-image">
-                        <img src="main_page/images/evrika_base3.png" alt="Base">
+                        <img src="images/evrika_base3.png" alt="Base">
                     </div>
                     <div class="cat-item-title">Новичок</div>
                     <div class="cat-item-info">Заветной мечтой этого малыша была энергетика. Он всегда хотел открыть
@@ -81,7 +81,7 @@
                 </div>
                 <div class="cat-item">
                     <div class="cat-item-image">
-                        <img src="main_page/images/evrika_cool2.png" alt="Cool">
+                        <img src="images/evrika_cool2.png" alt="Cool">
                     </div>
                     <div class="cat-item-title">Продвинутый</div>
                     <div class="cat-item-info">У него папа-энергетик, у него мама-энергетик, да он сам у себя энергетик!
@@ -91,7 +91,7 @@
                 </div>
                 <div class="cat-item">
                     <div class="cat-item-image">
-                        <img src="main_page/images/evrika_cosmo1.png" alt="Cosmo">
+                        <img src="images/evrika_cosmo1.png" alt="Cosmo">
                     </div>
                     <div class="cat-item-title">Эксперт</div>
                     <div class="cat-item-info">Этот котенок не с нашей планеты . В его родной галактике он познал уже
@@ -100,9 +100,9 @@
                     </div>
                 </div>
             </div>
-            <div class="cat-action">
+            <!-- <div class="cat-action">
                 <button class="button-play">Я готов к игре!</button>
-            </div>
+            </div> -->
         </div>
     </section>
 </body>

@@ -71,7 +71,7 @@ if (isset($_POST['submit_diff'])) {
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="levels/style.css">
+	<link rel="stylesheet" href="styles/style.css">
 	<title>Выбор сложности</title>
 </head>
 
@@ -101,7 +101,7 @@ if (isset($_POST['submit_diff'])) {
 
 
 					<div class="form_radio_btn">
-						<input id="radio-1" type="radio" name="difficulty" value="1" checked>
+						<input id="radio-1" type="radio" name="difficulty" value="1" style="display:none">
 						<label for="radio-1">
 							<div class="app" id="app-one">
 								<div class="app__title">
@@ -110,12 +110,12 @@ if (isset($_POST['submit_diff'])) {
 								</div>
 								<!-- </form> -->
 								<div class="app__img">
-									<img src="levels/images/point_1.png" alt="">
-									<img src="levels/images/point_1.png" alt="">
-									<img src="levels/images/point_1.png" alt="">
+									<img src="images/point_1.png" alt="">
+									<img src="images/point_1.png" alt="">
+									<img src="images/point_1.png" alt="">
 								</div>
 								<div class="app__cat">
-									<img src="./le" alt="">
+									<img src="images/evrika_base 2.png" alt="">
 								</div>
 							</div>
 						</label>
@@ -123,7 +123,7 @@ if (isset($_POST['submit_diff'])) {
 
 
 					<div class="form_radio_btn">
-						<input id="radio-2" type="radio" name="difficulty" value="2">
+						<input id="radio-2" type="radio" name="difficulty" value="2" style="display:none">
 						<label for="radio-2">
 							<div class="app" id="app-two">
 								<!-- <form action="difficulty.php" method="post"> -->
@@ -133,11 +133,11 @@ if (isset($_POST['submit_diff'])) {
 									Если веришь в свои силы, то тебе сюда. Обрати внимание, у тебя всего две попытки!
 								</div>
 								<div class="app__img">
-									<img src="levels/images/point_2.png" alt="">
-									<img src="levels/images/point_2.png" alt="">
+									<img src="images/point_2.png" alt="">
+									<img src="images/point_2.png" alt="">
 								</div>
 								<div class="app__cat">
-									<img src="levels/images/evrika_cool 2.png" alt="">
+									<img src="images/evrika_cool 2.png" alt="">
 								</div>
 							</div>
 						</label>
@@ -145,7 +145,7 @@ if (isset($_POST['submit_diff'])) {
 
 
 					<div class="form_radio_btn">
-						<input id="radio-3" type="radio" name="difficulty" value="3">
+						<input id="radio-3" type="radio" name="difficulty" value="3" style="display:none">
 						<label for="radio-3">
 							<div class="app" id="app-three">
 								<div class="app__title">
@@ -153,10 +153,10 @@ if (isset($_POST['submit_diff'])) {
 									Вау! Игра с экспертом по энергетике - это вызов всему миру. У тебя нет права на ошибку...
 								</div>
 								<div class="app__img">
-									<img src="levels/images/point_3.png" alt="">
+									<img src="images/point_3.png" alt="">
 								</div>
 								<div class="app__cat">
-									<img src="levels/images/evrika_3.png" alt="">
+									<img src="images/evrika_cosmo 1.png" alt="">
 								</div>
 							</div>
 						</label>
@@ -166,20 +166,22 @@ if (isset($_POST['submit_diff'])) {
 				<!-- </form> -->
 			</div>
 		</header>
-		<main>
-			<div class="container">
+		<main align="center">
+			<div class="container"  align="center" style="margin-left:150px; margin-right:150px">
 				<div class="info">
 					<p id="info-p">Правила игры</p>
-					Твоя главная задача набрать как можно больше баллов. Их можно заработать отвечая на вопросы, каждый из которых составлен согласно небольшому конспекту. Чем лучше ты изучишь предложенную информацию, тем выше вероятность ответить верно.
-					Чтобы заработать больше баллов выбирай более высокую сложность. Однако, чем выше уровень сложности, тем меньше у тебя жизней (актуальное количество отмечается сердечками в твоём профиле). Как только сердечки закончатся баллы обнулятся, а путь придётся начинать сначала.
+						<p style="text-align:justify">
+						Твоя главная задача набрать как можно больше баллов. Их можно заработать отвечая на вопросы, каждый из которых составлен согласно небольшому конспекту. Чем лучше ты изучишь предложенную информацию, тем выше вероятность ответить верно.
+						Чтобы заработать больше баллов выбирай более высокую сложность. Однако, чем выше уровень сложности, тем меньше у тебя жизней (актуальное количество отмечается сердечками в твоём профиле). Как только сердечки закончатся баллы обнулятся, а путь придётся начинать сначала.
+						</p>
 					<p>Структура подсчёта баллов</p>
 					Ниже указаны коэффициенты умножения набранных за правильный ответ очков.
 					<div class="points">
 						<div class="point">
 							<div class="point__img">
-								<img src="levels/images/point_1.png" alt="">
-								<img src="levels/images/point_1.png" alt="">
-								<img src="levels/images/point_1.png" alt="">
+								<img src="images/point_1.png" alt="">
+								<img src="images/point_1.png" alt="">
+								<img src="images/point_1.png" alt="">
 							</div>
 							<p>
 								x 1
@@ -188,8 +190,8 @@ if (isset($_POST['submit_diff'])) {
 						</div>
 						<div class="point">
 							<div class="point__img">
-								<img src="levels/images/point_2.png" alt="">
-								<img src="levels/images/point_2.png" alt="">
+								<img src="images/point_2.png" alt="">
+								<img src="images/point_2.png" alt="">
 							</div>
 							<p>
 								x 2
@@ -198,7 +200,7 @@ if (isset($_POST['submit_diff'])) {
 						</div>
 						<div class="point">
 							<div class="point__img">
-								<img src="levels/images/point_3.png" alt="">
+								<img src="images/point_3.png" alt="">
 							</div>
 							<p>
 								x 3

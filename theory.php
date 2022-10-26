@@ -45,7 +45,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat_theory</title>
-    <link rel="stylesheet" href="theory/styles/style.css">
+    <link rel="stylesheet" href="styles/theory_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap"
@@ -73,7 +73,7 @@
             	</div>
     		</header>
 		</div>
-	</div>		
+	</div>
     <section class="hat">
         <h1 class="main-title">ТЕОРИЯ</h1>
         <div class="line-image">
