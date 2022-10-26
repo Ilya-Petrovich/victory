@@ -53,7 +53,7 @@
 				            <!-- <div class="info-image">
 				                <img src="images/avatar.png" alt="background">
 				            </div> -->
-				            <div class="info-cat">
+				            <div class="info-cat" align="center">
 				                <img src="images/comp_base.png" alt="main-cat" style="width:450px">
 				            </div>
 				            <div class="lifes-image" align="center">
@@ -71,43 +71,53 @@
 						</td>
 						<td>
 				            <div class="top">
-				                <h3 class="my-point" align="center">Мой счёт</h3>
+				                <h3 class="my-point" align="center" style="line-height: 115px;">Мой счёт</h3>
 								<?php echo '<h3 class="point" align="center">'.$score.'</h3>'; ?>
 				                <!-- <h3 class="leaders">Таблица лидеро</h3> -->
-									<h1 class="leaders" align="left" style="width:auto; left:1110px; right:0; top:-200px">
+									<h1 class="leaders" align="left" style="width:auto; position:relative; left:900px; right:0; top:400px">
 										<?php
 											$dir = opendir('users/');
 											$index = 1;
 
 											$results = [];
 
-											// read users file
-											$res_file = fopen("results.csv", "r+");
-											if ($res_file) {
-												for ($i = 0; $i < 15; $i++) {
-													$line = explode(";", fgets($res_file, 100));
-													array_push($results, $line);
-													// echo ($i + 1).". ".$line."<br>";
-												}
-											}
-
-
-											// read users file
+											// read users files
+											$new_res = [];
 											while(($f = readdir($dir)) !== false) {
 												if($f != '.' && $f != '..') {
 													$team = substr($f, 0, strlen($f) - 4);
-													// array_push($results, $team);
-													// echo $index.". ".$team."<br>";
+													$file = fopen("users/".$f, "r");
+													$text = fgets($file, 100);
+													$text = explode(";", $text);
+													$a = array($text[4], $text[7], $team);
+													array_push($new_res, $a);
+													// echo $a[0]." ".$a[1]." ".$a[2]."<br>";
 													$index++;
 												}
 											}
 
+											sort($new_res);
+
+											// for ($i = 0; $i < count($new_res); $i++) {
+											// 	echo $new_res[$i][0]." ".$new_res[$i][1]." ".$new_res[$i][2]."<br>";
+											// }
+
 											// show results
 											echo "<table>";
-											for ($i = 0; $i < count($results); $i++) {
+											for ($i = 0; $i < count($new_res); $i++) {
 												echo "<tr>";
-												if ($results[$i][0] != "-") {
-													echo '<td style="width:500px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+												if ($new_res[$i][2][0] != "-") {
+													if ($i > 2) {
+															if (count($new_res) >= 15) {
+																if ($new_res[14][2][0] != "-") {
+																	echo '<td style="width:600px; text-align:center;">'.'. . .'.'</td>'.'<tr>';
+																	echo '<td style="width:600px">'.(15).'. '.$new_res[14][2].'</td><td >'.$new_res[$i][0].'</td>';
+																}
+															}
+															break;
+
+													}
+													echo '<td style="width:600px">'.($i + 1).'. '.$new_res[$i][2].'</td><td >'.$new_res[$i][0].'</td>';
 												}
 												echo "</tr>";
 											}
