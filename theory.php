@@ -66,7 +66,7 @@ if (!isset($_COOKIE["username"])) {
                         	<a href="levels.php">К выбору уровня</a>
                     	</li>
                     	<li class="menu-item-one">
-                        	<a href="..">Мой прогресс</a>
+                        	<a href="personal_page.php">Мой прогресс</a>
                     	</li>
                     	<li class="menu-item-two">
 							<form action="index.php" method="post">

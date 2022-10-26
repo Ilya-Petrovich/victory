@@ -20,7 +20,7 @@ if (!isset($_COOKIE["username"])) {
 
 	if ($info[1] == 0) {
 		echo "GAME OVER!";
-		header("Location: game_over.php");
+		// header("Location: game_over.php");
 	}
 	// for ($i = 0; $i < 10; $i++) {
 	// 	echo $info[6][$i]."<br>";
@@ -55,7 +55,7 @@ if (!isset($_COOKIE["username"])) {
             <div class="navigation">
                 <div class="nav__left">
                     <!-- <a href=".." class="home">На главную</a> -->
-                    <a href="..">Мой прогресс</a>
+                    <a href="personal_page.php">Мой прогресс</a>
                 </div>
 				<form action="index.php" method="post">
 					<button class="exit" type="submit" name="submit_exit">Выйти</button>
