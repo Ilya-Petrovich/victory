@@ -81,9 +81,18 @@
 
 
 						// read users files
+						$new_res = [];
 						while(($f = readdir($dir)) !== false) {
 							if($f != '.' && $f != '..') {
 								$team = substr($f, 0, strlen($f) - 4);
+								$file = fopen("users/".$f, "r");
+								$text = fgets($file, 100);
+								$text = explode(";", $text);
+								$a = array($text[4], $text[7]);
+								array_push($new_res, $a);
+								echo $a[0]." ".$a[1]."<br>";
+								echo filemtime("users/".$f);
+								// array_push($new_res, $team);
 								// array_push($results, $team);
 								// echo $index.". ".$team."<br>";
 								$index++;
@@ -92,10 +101,10 @@
 
 						// show results
 						echo "<table>";
-						for ($i = 0; $i < count($results); $i++) {
+						for ($i = 0; $i < count($new_res); $i++) {
 							echo "<tr>";
-							if ($results[$i][0] != "-") {
-								echo '<td style="width:1300px">'.($i + 1).'. '.$results[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
+							if ($new_res[$i][0] != "-") {
+								echo '<td style="width:1300px">'.($i + 1).'. '.$new_res[$i][0].'</td><td >'.$results[$i][1].'</td><br>';
 							}
 							echo "</tr>";
 						}
