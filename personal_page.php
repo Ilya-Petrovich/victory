@@ -38,7 +38,7 @@
         <div class="container">
             <div class="menu">
 				<div class="navigation">
-					<<?php if ($info[1] != 0) { ?>
+					<?php if ($info[1] != 0) { ?>
 						<a href="levels.php" style="text-decoration:none; width:1500px">К выбору уровня</a>
 					<?php } else { ?>
 						<a href="difficulty.php" style="text-decoration:none; width:1500px">Начать новую попытку</a>
