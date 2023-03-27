@@ -72,7 +72,9 @@ if (isset($_POST['submit_exit'])) {
     <section class="levels">
         <div class="wrapper2">
             <div class="container">
-                <h2 class="sub-title">Познакомиться с котятами-инженерами</h2>
+                <div class="temp">
+                    <h2 class="sub-title">Познакомиться с котятами-инженерами</h2>
+                </div>
                 <div class="cat-items">
                     <div class="cat-item">
                         <div class="cat-item-image">

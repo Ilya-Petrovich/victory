@@ -20,13 +20,13 @@ body{
     display: flex;
     justify-content: center;
     padding-top: 100px;
-    
+
 }
 .wrapper{
     width: 1920px;
     display:flex;
     padding-top: 0px;
-}   
+}
 
 .main-title {
     font-weight: bold;
@@ -36,7 +36,7 @@ body{
     width: 822px;
     font-family: Exo 2;
     margin-left: 120px;
-    
+
 }
 
 .main-text {
@@ -138,7 +138,15 @@ body{
     justify-content: center;
 }
 
+.temp {
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+}
+
 .sub-title {
+    display: flex;
+    align-items: center;
     width: 1386px;
     height: 244px;
     font-weight: 600;
@@ -147,7 +155,7 @@ body{
     text-align: center;
     margin-top: 41px;
     color: #FFFFFF;
-    margin-left: 267px;
+    /* margin-left: 267px; */
     margin-top: 159px;
     padding-top: 50px;
 }
