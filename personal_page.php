@@ -38,7 +38,11 @@
         <div class="container">
             <div class="menu">
 				<div class="navigation">
-					<a href="levels.php" style="text-decoration:none; width:1500px">К выбору уровня</a>
+					<<?php if ($info[1] != 0) { ?>
+						<a href="levels.php" style="text-decoration:none; width:1500px">К выбору уровня</a>
+					<?php } else { ?>
+						<a href="difficulty.php" style="text-decoration:none; width:1500px">Начать новую попытку</a>
+					<?php } ?>
 					<form action="index.php" method="post">
 						  <button class="exit" type="submit" name="submit_exit">Выйти</button>
 					</form>
@@ -93,7 +97,7 @@
 													$file = fopen("users/".$f, "r");
 													$text = fgets($file, 100);
 													$text = explode(";", $text);
-													$a = array($text[4], 2000000000 - $text[7], $team);
+													$a = array($text[5], 2000000000 - $text[7], $team);
 													array_push($new_res, $a);
 													// echo $a[0]." ".$a[1]." ".$a[2]."<br>";
 													$index++;

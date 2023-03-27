@@ -161,6 +161,10 @@ if (!isset($_COOKIE["username"])) {
 											// 	echo $info[$i]."<br>";
 											// }
 											$info[4] = $score;
+
+											if ($info[5] <= $info[4]) {
+												$info[5] = $info[4];
+											}
 											// for ($i = 0; $i < count($info); $i++) {
 											// 	echo $info[$i]."<br>";
 											// }

@@ -45,6 +45,9 @@ if (isset($_POST['submit_diff'])) {
 			// echo $info[1];
 			// echo $info[2];
 
+			$info[3] += 1;
+			$info[4] = 0;
+
 			fwrite($f, implode(";", $info));
 		}
 
