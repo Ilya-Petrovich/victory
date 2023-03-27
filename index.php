@@ -36,7 +36,7 @@ if (isset($_POST['submit_exit'])) {
                     <h1 class="main-title">CAT GAME</h1>
                     <p class="main-text"> Помоги котенку стать инженером-энергетиком!</p>
                     <div class="main-action">
-                        <a href="registration_page.php">
+                        <a href="registration_page.php" style="color: transparent">
                             <button class="button1" id="button1">РЕГИСТРАЦИЯ</button>
                         </a>
                         <a href="login_page.php">
@@ -99,7 +99,7 @@ if (isset($_POST['submit_exit'])) {
                             <img src="images/evrika_cosmo1.png" alt="Cosmo">
                         </div>
                         <div class="cat-item-title">Эксперт</div>
-                        <div class="cat-item-info">Этот котенок не с нашей планеты . В его родной галактике он познал уже
+                        <div class="cat-item-info">Этот котёнок не с нашей планеты . В его родной галактике он познал уже
                             все области энергетики. Полосатый прибыл на обучение к Землянам на своей собственной ракете!
                             Готов ли ты поделиться с ним своими знаниями?
                         </div>
