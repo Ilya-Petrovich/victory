@@ -11,7 +11,7 @@
     <title>Конец игры</title>
 </head>
 <body>
-    <header class="head__hard" style="width:100%; height:100vh">
+    <header class="head__hard" style="width:100%; height:100%">
         <div class="container">
             <div class="navigation">
                 <div class="nav__left">
