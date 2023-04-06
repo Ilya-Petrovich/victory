@@ -109,7 +109,7 @@ if (!isset($_COOKIE["username"])) {
 			}
 		} else {
 			$image = explode("$$", $text[$i])[1];
-			echo '<img src="tasks/'.$image.'">';
+			echo '<img style="margin-top: 30px;" src="tasks/'.$image.'">';
 			// echo $image;
 		}
 	}

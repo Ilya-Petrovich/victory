@@ -14,7 +14,7 @@ if (isset($_POST['submit_exit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
