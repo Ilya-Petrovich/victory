@@ -1,7 +1,12 @@
 <?php
-if (!isset($_COOKIE["username"])) {
-	header("Location: index.php");
-}
+	// header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
+  	// header("Pragma: no-cache");
+  	// header("Expires: -1");
+	// header("Refresh:0");
+
+	if (!isset($_COOKIE["username"])) {
+		header("Location: index.php");
+	}
 
 	error_reporting(E_ALL);
 
@@ -35,6 +40,10 @@ if (!isset($_COOKIE["username"])) {
 	if (isset($_POST['submit_answer'])) {
 		$f = fopen('tasks/q_'.$_POST['question'], 'r');
 		$number = $_POST['question'];
+		if ($info[6][$number - 1] != "z") {
+			header("Location: levels.php");
+		}
+
 	}
 
 	$message = "";
@@ -100,6 +109,10 @@ if (!isset($_COOKIE["username"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="no-cache">
+	<meta http-equiv="Expires: Sat, 26 Jul 1997 17:49:00 GMT">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, max-age=0, no-store, post-check=0, pre-check=0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Inter&family=Roboto&display=swap" rel="stylesheet">
@@ -172,9 +185,10 @@ if (!isset($_COOKIE["username"])) {
 											// $r = fgets($f_info, 100);
 
 
-											$f_info = fopen("users/".$_COOKIE["username"].".csv", "w");
 
 											if ($info[6][$number - 1] == "z") {
+												$f_info = fopen("users/".$_COOKIE["username"].".csv", "w");
+
 												$info[6][$number - 1] = "1";
 												$info[7] = filemtime("users/".$_COOKIE["username"].".csv");
 
@@ -182,12 +196,13 @@ if (!isset($_COOKIE["username"])) {
 													$info = (implode(';', $info));
 													fputs($f_info, $info, strlen($info));
 												}
+
+												fclose($f_info);
 											}
 											// for ($i = 0; $i < strlen($info); $i++) {
 											// 	echo $info[$i]."<br>";
 											// }
 
-											fclose($f_info);
 										} else {
 											$message = "ОТВЕТ НЕВЕРНЫЙ!";
 											$img = "images/sad_base 1.png";
