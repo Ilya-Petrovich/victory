@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
     font-family: 'Inter', sans-serif;
@@ -22,9 +22,10 @@ body{
     padding-top: 100px;
 
 }
-.wrapper{
+
+.wrapper {
     width: 1920px;
-    display:flex;
+    display: flex;
     padding-top: 0px;
 }
 
@@ -52,9 +53,13 @@ body{
 }
 
 .cat {
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.main-action {
+    margin-top: 220px;
 }
 
 .main-action a {
@@ -156,7 +161,7 @@ body{
     margin-top: 41px;
     color: #FFFFFF;
     /* margin-left: 267px; */
-    margin-top: 159px;
+    /* margin-top: 159px; */
     padding-top: 50px;
 }
 
@@ -175,7 +180,7 @@ body{
     background-position: center;
     background-size: cover;
     top: 2687px;
-    text-align: center;
+    /* text-align: center; */
 
     margin: 0 41px;
 }
@@ -193,6 +198,13 @@ body{
     margin-top: 112px;
 }
 
+.cat-item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .cat-item-info {
     width: 450px;
     height: 384px;
@@ -200,9 +212,10 @@ body{
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
     margin-top: 18px;
+    hyphens: auto;
 }
 
 .button-play {
